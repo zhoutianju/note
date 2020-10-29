@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [简介](README.md)
 
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)

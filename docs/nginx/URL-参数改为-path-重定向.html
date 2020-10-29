@@ -1,10 +1,10 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>URL 参数改为 path 重定向 · GitBook</title>
+        <title>URL 参数改为 path 重定向 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,16 +12,37 @@
         
         
     
+    
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -46,7 +67,11 @@
         
     
 
+
+    
+
         
+    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -63,6 +88,15 @@
     <link rel="prev" href="静态文件-403-错误.html" />
     
 
+    
+        <link rel="shortcut icon" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+    
+
     </head>
     <body>
         
@@ -71,7 +105,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -94,7 +128,7 @@
                 <a href="../">
             
                     
-                    Introduction
+                    简介
             
                 </a>
             
@@ -175,7 +209,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -208,12 +242,14 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="url-&#x53C2;&#x6570;&#x6539;&#x4E3A;-path-&#x91CD;&#x5B9A;&#x5411;">URL &#x53C2;&#x6570;&#x6539;&#x4E3A; path &#x91CD;&#x5B9A;&#x5411;</h1>
+                                <p> <span style="color:gray">last modified by zhoutianju
+, 2020-10-29 12:43:32</span></p>
+<h1 id="url-&#x53C2;&#x6570;&#x6539;&#x4E3A;-path-&#x91CD;&#x5B9A;&#x5411;">URL &#x53C2;&#x6570;&#x6539;&#x4E3A; path &#x91CD;&#x5B9A;&#x5411;</h1>
 <p>&#x80CC;&#x666F;&#xFF1A;&#x4E24;&#x5957;&#x670D;&#x52A1;&#xFF0C;&#x65E7;&#x7684; URL &#x4F7F;&#x7528;&#x4F20;&#x53C2;&#x65B9;&#x5F0F;&#xFF0C;&#x65B0;&#x7684;&#x4F7F;&#x7528; RESTful &#x98CE;&#x683C;&#xFF0C;&#x65E7;&#x670D;&#x52A1;&#x7684;&#x57DF;&#x540D;&#x73B0;&#x5728;&#x7ED9;&#x65B0;&#x670D;&#x52A1;&#x7528;&#x4E86;&#xFF0C;&#x4F46;&#x4E4B;&#x524D;&#x6709;&#x4EBA;&#x4FDD;&#x5B58;&#x4E86;&#x65E7;&#x670D;&#x52A1;&#x67D0;&#x4E9B;&#x9875;&#x9762;&#x7684; URL &#x73B0;&#x5728;&#x5C31;&#x8BBF;&#x95EE;&#x4E0D;&#x4E86;&#x4E86;&#xFF0C;&#x4F1A;&#x9ED8;&#x8BA4;&#x8BBF;&#x95EE;&#x5230;&#x9996;&#x9875;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x517C;&#x5BB9;&#x65E7;&#x670D;&#x52A1;&#x7684; URL &#x98CE;&#x683C;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x65B0;&#x670D;&#x52A1;</p>
 <p>&#x76EE;&#x6807;&#xFF1A;&#x63D0;&#x53D6;&#x65E7; URL &#x7684;&#x53C2;&#x6570;&#xFF0C;&#x62FC;&#x63A5;&#x5230;&#x65B0; URL path &#x4E2D;&#x5E76;&#x91CD;&#x5B9A;&#x5411;</p>
 <p>&#x4F8B;&#x5982;&#xFF1A;<code>http://a.com/user?id=2333</code> -&gt; <code>http://a.com/user/2333</code></p>
@@ -236,6 +272,7 @@
     }
 }
 </code></pre>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -279,39 +316,58 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"next":{"title":"Kindle 电子书导出 PDF 格式","level":"3.1","depth":1,"path":"杂项/Kindle-电子书导出-PDF-格式.md","ref":"杂项/Kindle-电子书导出-PDF-格式.md","articles":[]},"previous":{"title":"静态文件 403 错误","level":"2.2","depth":1,"path":"nginx/静态文件-403-错误.md","ref":"nginx/静态文件-403-错误.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"nginx/URL-参数改为-path-重定向.md","mtime":"2020-08-18T09:41:59.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-28T09:44:43.355Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"next":{"title":"Kindle 电子书导出 PDF 格式","level":"3.1","depth":1,"path":"杂项/Kindle-电子书导出-PDF-格式.md","ref":"杂项/Kindle-电子书导出-PDF-格式.md","articles":[]},"previous":{"title":"静态文件 403 错误","level":"2.2","depth":1,"path":"nginx/静态文件-403-错误.md","ref":"nginx/静态文件-403-错误.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","mermaid-gb3","chapter-fold","-lunr","-search","search-plus","favicon","github@2.0.0","hide-element","pageview-count","signature","code","back-to-top-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"asset/favicon.ico","bookmark":"asset/favicon.ico"},"back-to-top-button":{},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/URL-参数改为-path-重定向.md","mtime":"2020-10-29T04:43:32.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-29T04:44:07.299Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

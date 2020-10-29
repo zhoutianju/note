@@ -1,3 +1,43 @@
 {
-    "output": "./a"
+    "title": "个人笔记",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "search-plus",
+        "-sharing",
+        "github@2.0.0",
+        "mermaid-gb3",
+        "favicon",
+        "hide-element",
+        "pageview-count",
+        "signature",
+        "code",
+        "back-to-top-button",
+        "chapter-fold"
+    ],
+    "language": "zh-hans",
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/zhoutianju/note"
+        },
+        "favicon": {
+            "shortcut": "asset/favicon.ico",
+            "bookmark": "asset/favicon.ico"
+        },
+        "hide-element": {
+            "elements": [
+                ".gitbook-link"
+            ]
+        },
+        "gitbook-plugin-signature": {
+            "autoTimeStamp": {
+                "color": "gray",
+                "timeStampFormat": "YYYY-MM-DD HH:mm:ss"
+            },
+            "autoCopyright": {
+                "color": "gray",
+                "owner": "zhoutianju"
+            }
+        }
+    }
 }
