@@ -12,8 +12,8 @@
         "pageview-count",
         "signature",
         "code",
-        "back-to-top-button",
-        "chapter-fold"
+        "chapter-fold",
+        "anchor-navigation-ex"
     ],
     "language": "zh-hans",
     "pluginsConfig": {
@@ -38,6 +38,13 @@
                 "color": "gray",
                 "owner": "zhoutianju"
             }
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "printLog": true,
+            "associatedWithSummary": false,
+            "multipleH1": false,
+            "mode": "float"
         }
     }
 }

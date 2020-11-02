@@ -34,11 +34,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -280,10 +280,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p> <span style="color:gray">last modified by zhoutianju
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><b></b>&#x9759;&#x6001;&#x6587;&#x4EF6; 403 &#x9519;&#x8BEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><b></b>&#x95EE;&#x9898;&#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x67E5;&#x89E3;&#x51B3;"><b></b>&#x6392;&#x67E5;&#x89E3;&#x51B3;</a></li></ul></ul></div><a href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
 , 2020-10-29 12:43:31</span></p>
-<h1 id="&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;">&#x9759;&#x6001;&#x6587;&#x4EF6; 403 &#x9519;&#x8BEF;</h1>
-<h2 id="&#x95EE;&#x9898;&#x8BB0;&#x5F55;">&#x95EE;&#x9898;&#x8BB0;&#x5F55;</h2>
+<h1 id="&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><a name="&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x6001;&#x6587;&#x4EF6; 403 &#x9519;&#x8BEF;</h1>
+<h2 id="&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><a name="&#x95EE;&#x9898;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#x8BB0;&#x5F55;</h2>
 <p>&#x914D;&#x7F6E;&#xFF1A;</p>
 <pre><code class="lang-nginx"><span class="hljs-section">server</span> {
     <span class="hljs-attribute">listen</span> <span class="hljs-number">9233</span>;
@@ -300,7 +300,7 @@
 <p>&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x62A5; <code>Nginx 403</code>&#xFF0C;<code>error.log</code> &#x8BB0;&#x5F55;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;</p>
 <pre><code>2020/04/20 21:09:56 [error] 8374#0: *79668 &quot;/root/xxx/dist/index.html&quot; is forbidden (13: Permission denied), client: 10.252.148.50, server: , request: &quot;GET / HTTP/1.1&quot;, host: &quot;10.9.15.51:9233&quot;
 2020/04/20 21:09:56 [error] 8374#0: *79668 open() &quot;/root/xxx/dist/favicon.ico&quot; failed (13: Permission denied), client: 10.252.148.50, server: , request: &quot;GET /favicon.ico HTTP/1.1&quot;, host: &quot;10.9.15.51:9233&quot;, referrer: &quot;http://10.9.15.51:9233/&quot;
-</code></pre><h2 id="&#x6392;&#x67E5;&#x89E3;&#x51B3;">&#x6392;&#x67E5;&#x89E3;&#x51B3;</h2>
+</code></pre><h2 id="&#x6392;&#x67E5;&#x89E3;&#x51B3;"><a name="&#x6392;&#x67E5;&#x89E3;&#x51B3;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x67E5;&#x89E3;&#x51B3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x67E5;&#x89E3;&#x51B3;</h2>
 <p><code>ps -ef | grep nginx</code> &#x67E5;&#x770B; Nginx &#x542F;&#x52A8;&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>nginx worker</code> &#x8FDB;&#x7A0B;&#x662F;&#x7528; <code>nobody</code> &#x542F;&#x52A8;&#x7684;&#xFF1A;</p>
 <pre><code>root      5137     1  0  2019 ?        00:00:00 nginx: master process /usr/local/nginx/nginx
 nobody    8374  5137  0 21:09 ?        00:00:00 nginx: worker process 
@@ -316,8 +316,8 @@ nobody    8374  5137  0 21:09 ?        00:00:00 nginx: worker process is shuttin
 root     17824  5137  0 21:14 ?        00:00:00 nginx: worker process 
 root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
 </code></pre><p>&#x518D;&#x6B21;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x5230;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
-<p><br><br><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div></p>
-
+<p><br><br></p><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div><p></p>
+</body></html>
                                 
                                 </section>
                             
@@ -360,7 +360,7 @@ root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"静态文件 403 错误","level":"2.2","depth":1,"next":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"path":"nginx/URL-参数改为-path-重定向.md","ref":"nginx/URL-参数改为-path-重定向.md","articles":[]},"previous":{"title":"Windows 安装 Nginx","level":"2.1","depth":1,"path":"nginx/Windows-安装-Nginx.md","ref":"nginx/Windows-安装-Nginx.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","back-to-top-button","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"back-to-top-button":{},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/静态文件-403-错误.md","mtime":"2020-10-29T04:43:31.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T07:38:05.956Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"静态文件 403 错误","level":"2.2","depth":1,"next":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"path":"nginx/URL-参数改为-path-重定向.md","ref":"nginx/URL-参数改为-path-重定向.md","articles":[]},"previous":{"title":"Windows 安装 Nginx","level":"2.1","depth":1,"path":"nginx/Windows-安装-Nginx.md","ref":"nginx/Windows-安装-Nginx.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":false,"mode":"float","showGoTop":true,"printLog":true,"multipleH1":false,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/静态文件-403-错误.md","mtime":"2020-10-29T04:43:31.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T09:40:51.778Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -396,10 +396,6 @@ root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
