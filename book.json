@@ -21,8 +21,8 @@
             "url": "https://github.com/zhoutianju/note"
         },
         "favicon": {
-            "shortcut": "asset/favicon.ico",
-            "bookmark": "asset/favicon.ico"
+            "shortcut": "/asset/favicon.ico",
+            "bookmark": "/asset/favicon.ico"
         },
         "hide-element": {
             "elements": [

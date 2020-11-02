@@ -1,0 +1,523 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RabbitMQ HA 集群部署 · 个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../杂项/Kindle-电子书导出-PDF-格式.html" />
+    
+    
+    <link rel="prev" href="Linux-安装-RabbitMQ.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Nginx</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../nginx/Windows-安装-Nginx.html">
+            
+                <a href="../nginx/Windows-安装-Nginx.html">
+            
+                    
+                    Windows 安装 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../nginx/静态文件-403-错误.html">
+            
+                <a href="../nginx/静态文件-403-错误.html">
+            
+                    
+                    静态文件 403 错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../nginx/URL-参数改为-path-重定向.html">
+            
+                <a href="../nginx/URL-参数改为-path-重定向.html">
+            
+                    
+                    URL 参数改为 path 重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">RabbitMQ</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Linux-安装-RabbitMQ.html">
+            
+                <a href="Linux-安装-RabbitMQ.html">
+            
+                    
+                    Linux 安装 RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="RabbitMQ-HA-集群部署.html">
+            
+                <a href="RabbitMQ-HA-集群部署.html">
+            
+                    
+                    RabbitMQ HA 集群部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂项</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../杂项/Kindle-电子书导出-PDF-格式.html">
+            
+                <a href="../杂项/Kindle-电子书导出-PDF-格式.html">
+            
+                    
+                    Kindle 电子书导出 PDF 格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >RabbitMQ HA 集群部署</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p> <span style="color:gray">last modified by , 2020-11-02 14:06:10</span></p>
+<h1 id="rabbitmq-ha-&#x96C6;&#x7FA4;&#x90E8;&#x7F72;">RabbitMQ HA &#x96C6;&#x7FA4;&#x90E8;&#x7F72;</h1>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p><a href="https://objcoding.com/2018/10/19/rabbitmq-cluster/" target="_blank">https://objcoding.com/2018/10/19/rabbitmq-cluster/</a></p>
+<h2 id="ha-&#x90E8;&#x7F72;&#x67B6;&#x6784;&#x56FE;">HA &#x90E8;&#x7F72;&#x67B6;&#x6784;&#x56FE;</h2>
+<ul>
+<li>&#x666E;&#x901A;&#x96C6;&#x7FA4;&#xFF08;&#x65E0;&#x955C;&#x50CF;&#x961F;&#x5217;&#xFF09;</li>
+</ul>
+<p>&#x591A;&#x78C1;&#x76D8;&#x8282;&#x70B9;&#x53EF;&#x5B9E;&#x73B0;&#x5143;&#x6570;&#x636E; HA&#xFF0C;&#x4F46;&#x4E3B;&#x8282;&#x70B9;&#x6302;&#x4E86;&#x4F1A;&#x4E22;&#x5931;&#x672A;&#x6D88;&#x8D39;&#x7684;&#x6D88;&#x606F;</p>
+<p><img src="../asset/RabbitMQ-HA.svg" alt=""></p>
+<ul>
+<li>&#x955C;&#x50CF;&#x961F;&#x5217;&#x96C6;&#x7FA4;</li>
+</ul>
+<p>&#x591A;&#x78C1;&#x76D8;&#x8282;&#x70B9;&#x53EF;&#x5B9E;&#x73B0;&#x5143;&#x6570;&#x636E; HA&#xFF0C;&#x540C;&#x65F6;&#x955C;&#x50CF;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E3B;&#x8282;&#x70B9;&#x6302;&#x4E86;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x672A;&#x6D88;&#x8D39;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x4F46;&#x4F1A;&#x589E;&#x52A0;&#x955C;&#x50CF;&#x961F;&#x5217;&#x8282;&#x70B9;&#x7684;&#x7F51;&#x7EDC;&#x3001;&#x5B58;&#x50A8;&#x5F00;&#x9500;</p>
+<p><img src="../asset/RabbitMQ-HA-mirror.svg" alt=""></p>
+<h2 id="&#x540C;&#x6B65;-erlang-cookie">&#x540C;&#x6B65; Erlang Cookie</h2>
+<ul>
+<li>node1</li>
+</ul>
+<pre><code class="lang-bash">cat ~/.erlang.cookie
+<span class="hljs-comment"># &#x590D;&#x5236;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</span>
+</code></pre>
+<ul>
+<li>node2&#x3001;node3</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5148;&#x628A;&#x670D;&#x52A1;&#x505C;&#x6389;</span>
+rabbitmqctl stop
+
+<span class="hljs-comment"># &#x4FEE;&#x6539; Erlang Cookie</span>
+chmod +w ~/.erlang.cookie
+<span class="hljs-built_in">echo</span> {node1 &#x6587;&#x4EF6;&#x5185;&#x5BB9;} &gt; ~/.erlang.cookie
+chmod -w ~/.erlang.cookie
+
+<span class="hljs-comment"># &#x542F;&#x52A8;&#x670D;&#x52A1;</span>
+rabbitmq-server -detached
+</code></pre>
+<h2 id="&#x52A0;&#x5165;&#x96C6;&#x7FA4;">&#x52A0;&#x5165;&#x96C6;&#x7FA4;</h2>
+<blockquote>
+<p>&#x5173;&#x4E8E; RabbitMQ &#x8282;&#x70B9;&#x7684;&#x57DF;&#x540D;&#xFF1A;</p>
+<p>&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x77ED;&#x57DF;&#x540D;&#xFF0C;&#x5373;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C; <code>hostname -s</code> &#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;</p>
+</blockquote>
+<ul>
+<li>node2&#xFF08;&#x78C1;&#x76D8;&#x8282;&#x70B9;&#xFF09;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x56E0;&#x4E3A;&#x4FEE;&#x6539;&#x4E86; .erlang.cookie &#x7528; rabbitmqctl stop_app &#x53EF;&#x80FD;&#x6740;&#x4E0D;&#x6B7B;&#xFF0C;&#x9700;&#x8981;&#x7528; kill &#x6740;</span>
+rabbitmqctl stop_app
+rabbitmqctl reset
+rabbitmqctl join_cluster rabbit@<span class="hljs-variable">${node1_hostname}</span>
+rabbitmqctl start_app
+</code></pre>
+<ul>
+<li>node3&#xFF08;&#x5185;&#x5B58;&#x8282;&#x70B9;&#xFF09;</li>
+</ul>
+<pre><code class="lang-bash">rabbitmqctl stop_app
+rabbitmqctl reset
+rabbitmqctl join_cluster --ram rabbit@<span class="hljs-variable">${node1_hostname}</span>
+rabbitmqctl start_app
+</code></pre>
+<h2 id="&#x5173;&#x4E8E;&#x955C;&#x50CF;&#x961F;&#x5217;">&#x5173;&#x4E8E;&#x955C;&#x50CF;&#x961F;&#x5217;</h2>
+<p>&#x76EE;&#x524D;&#x53EA;&#x914D;&#x7F6E;&#x4E86; 2 &#x4E2A;&#x78C1;&#x76D8;&#x8282;&#x70B9;&#xFF0C;1 &#x4E2A;&#x5185;&#x5B58;&#x8282;&#x70B9;&#xFF0C;&#x7528;&#x4E8E;&#x5907;&#x4EFD;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x57FA;&#x4E8E; DP &#x7684;&#x573A;&#x666F;&#x961F;&#x5217;&#x548C;&#x6D88;&#x606F;&#x751F;&#x5B58;&#x5468;&#x671F;&#x8F83;&#x77ED;&#xFF0C;&#x6CA1;&#x6709;&#x505A;&#x955C;&#x50CF;&#x961F;&#x5217;&#x3002;&#x5176;&#x4ED6;&#x4E1A;&#x52A1;&#x53EF;&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-bash">rabbitmqctl <span class="hljs-built_in">set</span>_policy ha-other-app <span class="hljs-string">&quot;^other-app.&quot;</span> <span class="hljs-string">&apos;{&quot;ha-mode&quot;:&quot;nodes&quot;,&quot;ha-params&quot;:[&quot;rabbit@nodeA&quot;, &quot;rabbit@nodeB&quot;]}&apos;</span>
+</code></pre>
+<h2 id="haproxy-&#x8D1F;&#x8F7D;&#x5747;&#x8861;">HAProxy &#x8D1F;&#x8F7D;&#x5747;&#x8861;</h2>
+<h3 id="&#x5B89;&#x88C5;-haproxy">&#x5B89;&#x88C5; HAProxy</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</span>
+INSTALL_DIR=<span class="hljs-string">&apos;/opt&apos;</span>
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">$INSTALL_DIR</span>
+
+<span class="hljs-comment"># &#x5B89;&#x88C5; HAProxy</span>
+wget http://www.haproxy.org/download/2.2/src/haproxy-2.2.2.tar.gz
+tar -xzvf haproxy-2.2.2.tar.gz.tar
+<span class="hljs-built_in">cd</span> haproxy-2.2.2
+make TARGET=linux-glibc PREFIX=<span class="hljs-variable">$INSTALL_DIR</span>/haproxy &amp;&amp; make install PREFIX=<span class="hljs-variable">$INSTALL_DIR</span>/haproxy
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;HAPROXY_HOME=<span class="hljs-variable">$INSTALL_DIR</span>/haproxy&quot;</span> &gt;&gt; ~/.bash_profile
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;export PATH=$PATH:$HAPROXY_HOME/sbin&apos;</span> &gt;&gt; ~/.bash_profile
+<span class="hljs-built_in">source</span> ~/.bash_profile
+
+<span class="hljs-comment"># &#x5199;&#x5165;&#x91CD;&#x542F;&#x547D;&#x4EE4;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;#! /bin/bash
+cd $(dirname $0)/..
+haproxy -f haproxy.cfg -p haproxy.pid -sf $(cat haproxy.pid)&apos;</span> &gt;&gt; <span class="hljs-variable">$INSTALL_DIR</span>/haproxy/sbin/haproxy-reload
+chmod +x <span class="hljs-variable">$INSTALL_DIR</span>/haproxy/sbin/haproxy-reload
+
+<span class="hljs-comment"># &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53C2;&#x8003;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;</span>
+vi <span class="hljs-variable">$INSTALL_DIR</span>/haproxy/haproxy.cfg
+
+<span class="hljs-comment"># &#x91CD;&#x542F;&#x547D;&#x4EE4;&#x6267;&#x884C;</span>
+haproxy-reload
+</code></pre>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<pre><code># &#x5168;&#x5C40;&#x914D;&#x7F6E;
+global
+    log 127.0.0.1 local2
+    # chroot /var/lib/haproxy
+    pidfile /opt/haproxy/haproxy.pid # &#x66FF;&#x6362;&#x6210;&#x5B9E;&#x9645;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;
+    maxconn 20000
+    # user haproxy
+    # group haproxy
+    daemon
+
+# &#x9ED8;&#x8BA4;&#x914D;&#x7F6E;
+defaults
+    log global
+    mode tcp
+    option tcplog
+    option dontlognull
+    retries 3
+    option redispatch
+    maxconn 20000
+    timeout connect 5s
+    timeout client 120s
+    timeout server 120s
+
+# rabbitmq &#x6D88;&#x606F;&#x670D;&#x52A1;&#x4EE3;&#x7406;
+listen rabbitmq_cluster
+    bind 0.0.0.0:5670
+    mode tcp
+    balance roundrobin
+    server rabbit1 ${node1_hostname}:5672 check inter 5000 rise 2 fall 2
+    server rabbit2 ${node2_hostname}:5672 check inter 5000 rise 2 fall 2
+    server rabbit3 ${node3_hostname}:5672 check inter 5000 rise 2 fall 2
+
+# rabbitmq stomp &#x670D;&#x52A1;&#x4EE3;&#x7406;
+listen rabbitmq_cluster_stomp
+    bind 0.0.0.0:61610
+    mode tcp
+    balance roundrobin
+    server rabbit1 ${node1_hostname}:61613 check inter 5000 rise 2 fall 2
+    server rabbit2 ${node2_hostname}:61613 check inter 5000 rise 2 fall 2
+    server rabbit3 ${node3_hostname}:61613 check inter 5000 rise 2 fall 2
+
+# Haproxy &#x540E;&#x53F0;&#x76D1;&#x63A7;
+listen admin_stats
+    bind 0.0.0.0:8100
+    mode http
+    option httplog
+    stats enable
+    stats uri /stats
+    stats refresh 5s
+</code></pre><h3 id="haproxy-&#x81EA;&#x8EAB;-ha">HAProxy &#x81EA;&#x8EAB; HA</h3>
+<p>&#x53EF;&#x901A;&#x8FC7; Keepalived &#x5B9E;&#x73B0;</p>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Linux-安装-RabbitMQ.html" class="navigation navigation-prev " aria-label="Previous page: Linux 安装 RabbitMQ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../杂项/Kindle-电子书导出-PDF-格式.html" class="navigation navigation-next " aria-label="Next page: Kindle 电子书导出 PDF 格式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RabbitMQ HA 集群部署","level":"3.2","depth":1,"next":{"title":"Kindle 电子书导出 PDF 格式","level":"4.1","depth":1,"path":"杂项/Kindle-电子书导出-PDF-格式.md","ref":"杂项/Kindle-电子书导出-PDF-格式.md","articles":[]},"previous":{"title":"Linux 安装 RabbitMQ","level":"3.1","depth":1,"path":"rabbit-mq/Linux-安装-RabbitMQ.md","ref":"rabbit-mq/Linux-安装-RabbitMQ.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","back-to-top-button","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"back-to-top-button":{},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"rabbit-mq/RabbitMQ-HA-集群部署.md","mtime":"2020-11-02T06:06:10.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T07:38:05.956Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

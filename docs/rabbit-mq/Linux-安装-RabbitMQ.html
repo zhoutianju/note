@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>URL 参数改为 path 重定向 · 个人笔记</title>
+        <title>Linux 安装 RabbitMQ · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -82,10 +82,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../rabbit-mq/Linux-安装-RabbitMQ.html" />
+    <link rel="next" href="RabbitMQ-HA-集群部署.html" />
     
     
-    <link rel="prev" href="静态文件-403-错误.html" />
+    <link rel="prev" href="../nginx/URL-参数改为-path-重定向.html" />
     
 
     
@@ -143,9 +143,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="Windows-安装-Nginx.html">
+        <li class="chapter " data-level="2.1" data-path="../nginx/Windows-安装-Nginx.html">
             
-                <a href="Windows-安装-Nginx.html">
+                <a href="../nginx/Windows-安装-Nginx.html">
             
                     
                     Windows 安装 Nginx
@@ -156,9 +156,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="静态文件-403-错误.html">
+        <li class="chapter " data-level="2.2" data-path="../nginx/静态文件-403-错误.html">
             
-                <a href="静态文件-403-错误.html">
+                <a href="../nginx/静态文件-403-错误.html">
             
                     
                     静态文件 403 错误
@@ -169,9 +169,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="URL-参数改为-path-重定向.html">
+        <li class="chapter " data-level="2.3" data-path="../nginx/URL-参数改为-path-重定向.html">
             
-                <a href="URL-参数改为-path-重定向.html">
+                <a href="../nginx/URL-参数改为-path-重定向.html">
             
                     
                     URL 参数改为 path 重定向
@@ -189,9 +189,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../rabbit-mq/Linux-安装-RabbitMQ.html">
+        <li class="chapter active" data-level="3.1" data-path="Linux-安装-RabbitMQ.html">
             
-                <a href="../rabbit-mq/Linux-安装-RabbitMQ.html">
+                <a href="Linux-安装-RabbitMQ.html">
             
                     
                     Linux 安装 RabbitMQ
@@ -202,9 +202,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../rabbit-mq/RabbitMQ-HA-集群部署.html">
+        <li class="chapter " data-level="3.2" data-path="RabbitMQ-HA-集群部署.html">
             
-                <a href="../rabbit-mq/RabbitMQ-HA-集群部署.html">
+                <a href="RabbitMQ-HA-集群部署.html">
             
                     
                     RabbitMQ HA 集群部署
@@ -265,7 +265,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >URL 参数改为 path 重定向</a>
+        <a href=".." >Linux 安装 RabbitMQ</a>
     </h1>
 </div>
 
@@ -280,30 +280,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p> <span style="color:gray">last modified by zhoutianju
-, 2020-10-29 12:43:32</span></p>
-<h1 id="url-&#x53C2;&#x6570;&#x6539;&#x4E3A;-path-&#x91CD;&#x5B9A;&#x5411;">URL &#x53C2;&#x6570;&#x6539;&#x4E3A; path &#x91CD;&#x5B9A;&#x5411;</h1>
-<p>&#x80CC;&#x666F;&#xFF1A;&#x4E24;&#x5957;&#x670D;&#x52A1;&#xFF0C;&#x65E7;&#x7684; URL &#x4F7F;&#x7528;&#x4F20;&#x53C2;&#x65B9;&#x5F0F;&#xFF0C;&#x65B0;&#x7684;&#x4F7F;&#x7528; RESTful &#x98CE;&#x683C;&#xFF0C;&#x65E7;&#x670D;&#x52A1;&#x7684;&#x57DF;&#x540D;&#x73B0;&#x5728;&#x7ED9;&#x65B0;&#x670D;&#x52A1;&#x7528;&#x4E86;&#xFF0C;&#x4F46;&#x4E4B;&#x524D;&#x6709;&#x4EBA;&#x4FDD;&#x5B58;&#x4E86;&#x65E7;&#x670D;&#x52A1;&#x67D0;&#x4E9B;&#x9875;&#x9762;&#x7684; URL &#x73B0;&#x5728;&#x5C31;&#x8BBF;&#x95EE;&#x4E0D;&#x4E86;&#x4E86;&#xFF0C;&#x4F1A;&#x9ED8;&#x8BA4;&#x8BBF;&#x95EE;&#x5230;&#x9996;&#x9875;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x517C;&#x5BB9;&#x65E7;&#x670D;&#x52A1;&#x7684; URL &#x98CE;&#x683C;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x65B0;&#x670D;&#x52A1;</p>
-<p>&#x76EE;&#x6807;&#xFF1A;&#x63D0;&#x53D6;&#x65E7; URL &#x7684;&#x53C2;&#x6570;&#xFF0C;&#x62FC;&#x63A5;&#x5230;&#x65B0; URL path &#x4E2D;&#x5E76;&#x91CD;&#x5B9A;&#x5411;</p>
-<p>&#x4F8B;&#x5982;&#xFF1A;<code>http://a.com/user?id=2333</code> -&gt; <code>http://a.com/user/2333</code></p>
-<p>Nginx &#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
-    <span class="hljs-attribute">listen</span> <span class="hljs-number">8080</span>;
-    <span class="hljs-attribute">server_name</span> a.com; <span class="hljs-comment"># &#x8BF4;&#x660E;&#xFF1A;&#x5230;&#x8FD9;&#x91CC;&#x4E4B;&#x524D;&#x8FD8;&#x8981;&#x7ECF;&#x8FC7;&#x57DF;&#x540D;&#x7684; Nginx&#xFF0C;&#x5E76;&#x4E14;&#x6211;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#xFF0C;&#x5F53;&#x524D;&#x662F;&#x4E00;&#x4E2A;&#x4E0B;&#x6E38;&#x7684; Nginx</span>
+                                <p> <span style="color:gray">last modified by , 2020-10-30 17:35:41</span></p>
+<h1 id="linux-&#x5B89;&#x88C5;-rabbitmq">Linux &#x5B89;&#x88C5; RabbitMQ</h1>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5; erlang &#x73AF;&#x5883;&#xFF08;&#x9700;&#x8981; root &#x6743;&#x9650;&#xFF09;</span>
+sudo yum install erlang
 
-    <span class="hljs-comment"># &#x4E2D;&#x95F4;&#x7701;&#x7565;&#x5176;&#x4ED6;&#x914D;&#x7F6E; 10000 &#x884C;</span>
-    <span class="hljs-comment"># &#x4E0B;&#x9762;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#xFF01;&#xFF01;&#xFF01;</span>
+<span class="hljs-comment"># &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</span>
+INSTALL_DIR=<span class="hljs-string">&apos;/opt&apos;</span>
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">$INSTALL_DIR</span>
 
-    <span class="hljs-comment"># &#x65E7;&#x7248;&#x7528;&#x6237;&#x9875; URL &#x91CD;&#x5B9A;&#x5411;&#x5230;&#x65B0;&#x7248;&#x7528;&#x6237;&#x9875;</span>
-    <span class="hljs-attribute">location</span><span class="hljs-regexp"> ^~</span> /user {
-        <span class="hljs-comment"># &#x6B63;&#x5219;&#x5339;&#x914D;&#x51FA; URL &#x53C2;&#x6570;&#x91CC;&#x7684;&#x7528;&#x6237; ID&#xFF0C;&#x62FC;&#x63A5;&#x5230;&#x65B0;&#x7248; URL path &#x4E2D;&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x5E76;&#x628A; URL &#x53C2;&#x6570;&#x6E05;&#x7A7A;</span>
-        <span class="hljs-attribute">if</span> (<span class="hljs-variable">$args</span> <span class="hljs-regexp">~* &quot;schedulerId=(\d+)&quot;)</span> { <span class="hljs-comment"># &#x6B63;&#x5219;&#x5339;&#x914D;&#x51FA;&#x4E00;&#x7EC4;&#x53C2;&#x6570;</span>
-            <span class="hljs-attribute">set</span> <span class="hljs-variable">$id</span> <span class="hljs-variable">$1</span>; <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x91CD;&#x5B9A;&#x5411;&#x91CC;&#x76F4;&#x63A5;&#x7528; $1&#xFF0C;&#x4E0D;&#x6E05;&#x695A;&#x4E3A;&#x5565;</span>
-            <span class="hljs-comment"># set $args &apos;&apos;; # &#x91CD;&#x5B9A;&#x5411;&#x540E;&#x9ED8;&#x8BA4;&#x5E26;&#x4E4B;&#x524D;&#x7684; URL &#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x628A;&#x53C2;&#x6570;&#x7F6E;&#x7A7A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;</span>
-            <span class="hljs-attribute">rewrite</span> /user http://a.com/user/<span class="hljs-variable">$id</span>? <span class="hljs-literal">redirect</span>; <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x91CD;&#x5B9A;&#x5411;&#x7684; URL &#x9700;&#x8981;&#x5199;&#x57DF;&#x540D;&#xFF0C;&#x4E0D;&#x7136;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x662F; http://a.com:8080/ &#x7684;&#x57DF;&#x540D;&#xFF0C;&#x540C;&#x7406;&#x4E5F;&#x53EF;&#x4EE5;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4EFB;&#x610F;&#x5176;&#x4ED6;&#x57DF;&#x540D;</span>
-        }
-    }
-}
+<span class="hljs-comment"># &#x5B89;&#x88C5; RabbitMQ</span>
+wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.15/rabbitmq-server-generic-unix-3.6.15.tar.xz
+tar -xJvf rabbitmq-server-generic-unix-3.6.15.tar.xz
+ln <span class="hljs-_">-s</span> rabbitmq_server-3.6.15 rabbitmq
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;RABBITMQ_HOME=<span class="hljs-variable">$INSTALL_DIR</span>/rabbitmq&quot;</span> &gt;&gt; ~/.bash_profile
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;export PATH=$PATH:$RABBITMQ_HOME/sbin&apos;</span> &gt;&gt; ~/.bash_profile
+<span class="hljs-built_in">source</span> ~/.bash_profile
+
+<span class="hljs-comment"># &#x542F;&#x52A8; RabbitMQ</span>
+rabbitmq-server -detached
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;">&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x540E;&#x53F0;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x63D2;&#x4EF6;&#x53EF;&#x6839;&#x636E;&#x9700;&#x6C42;&#x5B89;&#x88C5;</span>
+rabbitmq-plugins <span class="hljs-built_in">enable</span> rabbitmq_management
+<span class="hljs-comment"># &#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86; STOMP &#x534F;&#x8BAE;</span>
+rabbitmq-plugins <span class="hljs-built_in">enable</span> rabbitmq_stomp
+</code></pre>
+<h2 id="&#x7528;&#x6237;&#x6388;&#x6743;">&#x7528;&#x6237;&#x6388;&#x6743;</h2>
+<p>&#x9ED8;&#x8BA4;&#x7528;&#x6237;&#xFF08;<code>guest</code>&#xFF09;&#x53EA;&#x80FD;&#x672C;&#x5730;&#x8BBF;&#x95EE;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x642D;&#x5EFA;&#x96C6;&#x7FA4;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x5728;&#x4E00;&#x53F0;&#x8282;&#x70B9;&#x4E0A;&#x521B;&#x5EFA;&#x5C31;&#x53EF;&#x4EE5;&#xFF0C;&#x642D;&#x5EFA;&#x96C6;&#x7FA4;&#x540E;&#x4F1A;&#x540C;&#x6B65;&#x5143;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x8D4B;&#x6743;</span>
+rabbitmqctl add_user admin Pa55WOrd1
+rabbitmqctl <span class="hljs-built_in">set</span>_user_tags admin administrator
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E1A;&#x52A1;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x8D4B;&#x6743;</span>
+rabbitmqctl add_user abc Pa55WOrd2
+<span class="hljs-comment"># &#x8D4B;&#x6743;&#xFF08;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;&#x7528;&#x6237;&#x540D; &#x8D44;&#x6E90;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; &#x5199;&#x6743;&#x9650; &#x8BFB;&#x6743;&#x9650;&#xFF09;</span>
+rabbitmqctl <span class="hljs-built_in">set</span>_permissions abc <span class="hljs-string">&apos;.*&apos;</span> <span class="hljs-string">&apos;.*&apos;</span> <span class="hljs-string">&apos;.*&apos;</span>
 </code></pre>
 <p><br><br><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div></p>
 
@@ -333,12 +349,12 @@
 
             
                 
-                <a href="静态文件-403-错误.html" class="navigation navigation-prev " aria-label="Previous page: 静态文件 403 错误">
+                <a href="../nginx/URL-参数改为-path-重定向.html" class="navigation navigation-prev " aria-label="Previous page: URL 参数改为 path 重定向">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../rabbit-mq/Linux-安装-RabbitMQ.html" class="navigation navigation-next " aria-label="Next page: Linux 安装 RabbitMQ">
+                <a href="RabbitMQ-HA-集群部署.html" class="navigation navigation-next " aria-label="Next page: RabbitMQ HA 集群部署">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -349,7 +365,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"next":{"title":"Linux 安装 RabbitMQ","level":"3.1","depth":1,"path":"rabbit-mq/Linux-安装-RabbitMQ.md","ref":"rabbit-mq/Linux-安装-RabbitMQ.md","articles":[]},"previous":{"title":"静态文件 403 错误","level":"2.2","depth":1,"path":"nginx/静态文件-403-错误.md","ref":"nginx/静态文件-403-错误.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","back-to-top-button","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"back-to-top-button":{},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/URL-参数改为-path-重定向.md","mtime":"2020-10-29T04:43:32.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T07:38:05.956Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Linux 安装 RabbitMQ","level":"3.1","depth":1,"next":{"title":"RabbitMQ HA 集群部署","level":"3.2","depth":1,"path":"rabbit-mq/RabbitMQ-HA-集群部署.md","ref":"rabbit-mq/RabbitMQ-HA-集群部署.md","articles":[]},"previous":{"title":"URL 参数改为 path 重定向","level":"2.3","depth":1,"path":"nginx/URL-参数改为-path-重定向.md","ref":"nginx/URL-参数改为-path-重定向.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","back-to-top-button","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"back-to-top-button":{},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"rabbit-mq/Linux-安装-RabbitMQ.md","mtime":"2020-10-30T09:35:41.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T07:38:05.956Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
