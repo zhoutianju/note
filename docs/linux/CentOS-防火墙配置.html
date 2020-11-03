@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Linux 安装 RabbitMQ · 个人笔记</title>
+        <title>CentOS 防火墙配置 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -82,10 +82,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="RabbitMQ-HA-集群部署.html" />
+    <link rel="next" href="../nginx/Windows-安装-Nginx.html" />
     
     
-    <link rel="prev" href="../nginx/URL-参数改为-path-重定向.html" />
+    <link rel="prev" href="../" />
     
 
     
@@ -143,9 +143,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../linux/CentOS-防火墙配置.html">
+        <li class="chapter active" data-level="2.1" data-path="CentOS-防火墙配置.html">
             
-                <a href="../linux/CentOS-防火墙配置.html">
+                <a href="CentOS-防火墙配置.html">
             
                     
                     CentOS 防火墙配置
@@ -209,9 +209,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="Linux-安装-RabbitMQ.html">
+        <li class="chapter " data-level="4.1" data-path="../rabbit-mq/Linux-安装-RabbitMQ.html">
             
-                <a href="Linux-安装-RabbitMQ.html">
+                <a href="../rabbit-mq/Linux-安装-RabbitMQ.html">
             
                     
                     Linux 安装 RabbitMQ
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="RabbitMQ-HA-集群部署.html">
+        <li class="chapter " data-level="4.2" data-path="../rabbit-mq/RabbitMQ-HA-集群部署.html">
             
-                <a href="RabbitMQ-HA-集群部署.html">
+                <a href="../rabbit-mq/RabbitMQ-HA-集群部署.html">
             
                     
                     RabbitMQ HA 集群部署
@@ -351,7 +351,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Linux 安装 RabbitMQ</a>
+        <a href=".." >CentOS 防火墙配置</a>
     </h1>
 </div>
 
@@ -366,47 +366,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#linux-&#x5B89;&#x88C5;-rabbitmq"><b></b>Linux &#x5B89;&#x88C5; RabbitMQ</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><b></b>&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x6388;&#x6743;"><b></b>&#x7528;&#x6237;&#x6388;&#x6743;</a></li></ul></ul></div><a href="#linux-&#x5B89;&#x88C5;-rabbitmq" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2020-10-30 17:35:41</span></p>
-<h1 id="linux-&#x5B89;&#x88C5;-rabbitmq"><a name="linux-&#x5B89;&#x88C5;-rabbitmq" class="anchor-navigation-ex-anchor" href="#linux-&#x5B89;&#x88C5;-rabbitmq"><i class="fa fa-link" aria-hidden="true"></i></a>Linux &#x5B89;&#x88C5; RabbitMQ</h1>
-<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5; erlang &#x73AF;&#x5883;&#xFF08;&#x9700;&#x8981; root &#x6743;&#x9650;&#xFF09;</span>
-sudo yum install erlang
-
-<span class="hljs-comment"># &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</span>
-INSTALL_DIR=<span class="hljs-string">&apos;/opt&apos;</span>
-<span class="hljs-built_in">cd</span> <span class="hljs-variable">$INSTALL_DIR</span>
-
-<span class="hljs-comment"># &#x5B89;&#x88C5; RabbitMQ</span>
-wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.15/rabbitmq-server-generic-unix-3.6.15.tar.xz
-tar -xJvf rabbitmq-server-generic-unix-3.6.15.tar.xz
-ln <span class="hljs-_">-s</span> rabbitmq_server-3.6.15 rabbitmq
-<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;RABBITMQ_HOME=<span class="hljs-variable">$INSTALL_DIR</span>/rabbitmq&quot;</span> &gt;&gt; ~/.bash_profile
-<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;export PATH=$PATH:$RABBITMQ_HOME/sbin&apos;</span> &gt;&gt; ~/.bash_profile
-<span class="hljs-built_in">source</span> ~/.bash_profile
-
-<span class="hljs-comment"># &#x542F;&#x52A8; RabbitMQ</span>
-rabbitmq-server -detached
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#centos-&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;"><b></b>CentOS &#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#centos6"><b></b>CentOS6</a></li><li><span class="title-icon "></span><a href="#centos7"><b></b>CentOS7</a></li></ul></ul></div><a href="#centos-&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
+, 2020-11-03 16:21:33</span></p>
+<h1 id="centos-&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;"><a name="centos-&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#centos-&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>CentOS &#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;</h1>
+<h2 id="centos6"><a name="centos6" class="anchor-navigation-ex-anchor" href="#centos6"><i class="fa fa-link" aria-hidden="true"></i></a>CentOS6</h2>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF1A;</p>
+<pre><code class="lang-bash">/etc/init.d/iptables status
 </code></pre>
-<h2 id="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a name="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h2>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x540E;&#x53F0;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x63D2;&#x4EF6;&#x53EF;&#x6839;&#x636E;&#x9700;&#x6C42;&#x5B89;&#x88C5;</span>
-rabbitmq-plugins <span class="hljs-built_in">enable</span> rabbitmq_management
-<span class="hljs-comment"># &#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86; STOMP &#x534F;&#x8BAE;</span>
-rabbitmq-plugins <span class="hljs-built_in">enable</span> rabbitmq_stomp
+<p>&#x4FEE;&#x6539;&#x6743;&#x9650;&#xFF1A;</p>
+<pre><code class="lang-bash">vi /etc/sysconfig/iptables
 </code></pre>
-<h2 id="&#x7528;&#x6237;&#x6388;&#x6743;"><a name="&#x7528;&#x6237;&#x6388;&#x6743;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x6388;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x6388;&#x6743;</h2>
-<p>&#x9ED8;&#x8BA4;&#x7528;&#x6237;&#xFF08;<code>guest</code>&#xFF09;&#x53EA;&#x80FD;&#x672C;&#x5730;&#x8BBF;&#x95EE;&#x3002;</p>
-<blockquote>
-<p>&#x5982;&#x679C;&#x642D;&#x5EFA;&#x96C6;&#x7FA4;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x5728;&#x4E00;&#x53F0;&#x8282;&#x70B9;&#x4E0A;&#x521B;&#x5EFA;&#x5C31;&#x53EF;&#x4EE5;&#xFF0C;&#x642D;&#x5EFA;&#x96C6;&#x7FA4;&#x540E;&#x4F1A;&#x540C;&#x6B65;&#x5143;&#x6570;&#x636E;&#x3002;</p>
-</blockquote>
-<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x8D4B;&#x6743;</span>
-rabbitmqctl add_user admin Pa55WOrd1
-rabbitmqctl <span class="hljs-built_in">set</span>_user_tags admin administrator
-
-<span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E1A;&#x52A1;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x8D4B;&#x6743;</span>
-rabbitmqctl add_user abc Pa55WOrd2
-<span class="hljs-comment"># &#x8D4B;&#x6743;&#xFF08;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;&#x7528;&#x6237;&#x540D; &#x8D44;&#x6E90;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; &#x5199;&#x6743;&#x9650; &#x8BFB;&#x6743;&#x9650;&#xFF09;</span>
-rabbitmqctl <span class="hljs-built_in">set</span>_permissions abc <span class="hljs-string">&apos;.*&apos;</span> <span class="hljs-string">&apos;.*&apos;</span> <span class="hljs-string">&apos;.*&apos;</span>
+<p>&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;&#xFF1A;</p>
+<pre><code class="lang-bash">service iptables restart
+</code></pre>
+<h2 id="centos7"><a name="centos7" class="anchor-navigation-ex-anchor" href="#centos7"><i class="fa fa-link" aria-hidden="true"></i></a>CentOS7</h2>
+<p>&#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-bash">firewall-cmd --permanent --list-port
+</code></pre>
+<p>&#x6253;&#x5F00;&#x7AEF;&#x53E3;&#xFF1A;</p>
+<pre><code class="lang-bash">firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+</code></pre>
+<p>&#x5173;&#x95ED;&#x7AEF;&#x53E3;&#xFF1A;</p>
+<pre><code class="lang-bash">firewall-cmd --zone=public --remove-port=80/tcp --permanent
+firewall-cmd --reload
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x6253;&#x5F00;&#xFF1A;</p>
+<pre><code class="lang-bash">firewall-cmd --zone=public --query-port=8888/tcp
+</code></pre>
+<p>&#x67E5;&#x770B;&#x72B6;&#x6001;&#xFF1A;</p>
+<pre><code class="lang-bash">systemctl status firewalld
 </code></pre>
 <p><br><br></p><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div><p></p>
 </body></html>
@@ -436,12 +425,12 @@ rabbitmqctl <span class="hljs-built_in">set</span>_permissions abc <span class="
 
             
                 
-                <a href="../nginx/URL-参数改为-path-重定向.html" class="navigation navigation-prev " aria-label="Previous page: URL 参数改为 path 重定向">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="RabbitMQ-HA-集群部署.html" class="navigation navigation-next " aria-label="Next page: RabbitMQ HA 集群部署">
+                <a href="../nginx/Windows-安装-Nginx.html" class="navigation navigation-next " aria-label="Next page: Windows 安装 Nginx">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -452,7 +441,7 @@ rabbitmqctl <span class="hljs-built_in">set</span>_permissions abc <span class="
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Linux 安装 RabbitMQ","level":"4.1","depth":1,"next":{"title":"RabbitMQ HA 集群部署","level":"4.2","depth":1,"path":"rabbit-mq/RabbitMQ-HA-集群部署.md","ref":"rabbit-mq/RabbitMQ-HA-集群部署.md","articles":[]},"previous":{"title":"URL 参数改为 path 重定向","level":"3.3","depth":1,"path":"nginx/URL-参数改为-path-重定向.md","ref":"nginx/URL-参数改为-path-重定向.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":false,"mode":"float","showGoTop":true,"printLog":true,"multipleH1":false,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"rabbit-mq/Linux-安装-RabbitMQ.md","mtime":"2020-10-30T09:35:41.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T09:04:52.898Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CentOS 防火墙配置","level":"2.1","depth":1,"next":{"title":"Windows 安装 Nginx","level":"3.1","depth":1,"path":"nginx/Windows-安装-Nginx.md","ref":"nginx/Windows-安装-Nginx.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","pageview-count","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":false,"mode":"float","showGoTop":true,"printLog":true,"multipleH1":false,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"pageview-count":{},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"linux/CentOS-防火墙配置.md","mtime":"2020-11-03T08:21:33.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T09:04:52.898Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
