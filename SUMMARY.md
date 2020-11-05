@@ -5,6 +5,11 @@
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 
+## Git
+* [全局配置](git/全局配置.md)
+* [常用命令](git/常用命令.md)
+* [修改提交人、邮箱](git/修改提交人、邮箱.md)
+
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)
 * [静态文件 403 错误](nginx/静态文件-403-错误.md)
