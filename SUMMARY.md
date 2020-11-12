@@ -23,6 +23,7 @@
 * [vsftpd 安装、配置](ftp/vsftpd-安装、配置.md)
 * [vsftpd 配置虚拟用户](ftp/vsftpd-配置虚拟用户.md)
 * [URL 访问加用户名、密码](ftp/URL-访问加用户名、密码.md)
+* [Windows 一键上传 FTP 脚本配置](ftp/Windows-一键上传-FTP-脚本配置.md)
 
 ## 网络
 * [DNS A 记录和 CNAME 记录](网络/DNS-A-记录和-CNAME-记录.md)
