@@ -5,6 +5,9 @@
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 
+## Windows
+* [CMD 修改字体为 Consolas + 微软雅黑](windows/CMD-修改字体为-Consolas-+-微软雅黑.md)
+
 ## Git
 * [全局配置](git/全局配置.md)
 * [常用命令](git/常用命令.md)
