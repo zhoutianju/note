@@ -1,6 +1,10 @@
 # Windows 安装 Nginx
 
+## 参考
+
 参考官方说明：[http://nginx.org/en/docs/windows.html](http://nginx.org/en/docs/windows.html)
+
+## 安装
 
 下载：[http://nginx.org/en/docs/windows.html](http://nginx.org/en/docs/windows.html)
 
@@ -28,6 +32,10 @@ nginx -s reload	# changing configuration, starting new worker processes with a n
 nginx -s reopen	# re-opening log files
 ```
 
+## 开机启动
+
+### 启动脚本
+
 配置开机启动（以 `d:\opt\nginx-1.16.1` 作为安装目录为例），`start.bat` 文件内容如下：
 
 ```batch
@@ -44,6 +52,8 @@ IF NOT "%ERRORLEVEL%"=="0" (
    ECHO Nginx is already running.
 )
 ```
+
+### 计划任务
 
 Windows 创建计划任务（Windows 开始菜单搜索“计划”即可），开机启动，修改了以下配置项
 

@@ -8,6 +8,10 @@
 ## Windows
 * [CMD 修改字体为 Consolas + 微软雅黑](windows/CMD-修改字体为-Consolas-+-微软雅黑.md)
 
+## WSL
+* [开机时自动开启 WSL ssh 服务](wsl/开机时自动开启-WSL-ssh-服务.md)
+* [VPN 环境下 WSL 更新 DNS](wsl/VPN-环境下-WSL-更新-DNS.md)
+
 ## Git
 * [全局配置](git/全局配置.md)
 * [常用命令](git/常用命令.md)
