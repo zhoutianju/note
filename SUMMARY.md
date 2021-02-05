@@ -5,6 +5,9 @@
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 
+## Mac
+* [brew 安装指定版本的软件](mac/brew-安装指定版本的软件.md)
+
 ## Windows
 * [CMD 修改字体为 Consolas + 微软雅黑](windows/CMD-修改字体为-Consolas-+-微软雅黑.md)
 
@@ -16,6 +19,10 @@
 * [全局配置](git/全局配置.md)
 * [常用命令](git/常用命令.md)
 * [修改提交人、邮箱](git/修改提交人、邮箱.md)
+
+## GitBook
+
+* [安装](gitbook/安装.md)
 
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)
