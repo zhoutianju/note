@@ -2,6 +2,9 @@
 
 * [简介](README.md)
 
+## Maven
+* [高版本 Maven 检查依赖冲突](maven/高版本-Maven-检查依赖冲突.md)
+
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 
@@ -21,7 +24,6 @@
 * [修改提交人、邮箱](git/修改提交人、邮箱.md)
 
 ## GitBook
-
 * [安装](gitbook/安装.md)
 
 ## Nginx
