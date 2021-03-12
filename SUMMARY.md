@@ -5,6 +5,9 @@
 ## Maven
 * [高版本 Maven 检查依赖冲突](maven/高版本-Maven-检查依赖冲突.md)
 
+## Shell
+* [常用脚本片段](shell/常用脚本片段.md)
+
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 
