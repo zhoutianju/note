@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>静态文件 403 错误 · 个人笔记</title>
+        <title>Linux 安装 Nginx · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="URL-参数改为-path-重定向.html" />
+    <link rel="next" href="静态文件-403-错误.html" />
     
     
-    <link rel="prev" href="Linux-安装-Nginx.html" />
+    <link rel="prev" href="Windows-安装-Nginx.html" />
     
 
     
@@ -351,7 +351,7 @@
             
         </li>
     
-        <li class="chapter " data-level="10.2" data-path="Linux-安装-Nginx.html">
+        <li class="chapter active" data-level="10.2" data-path="Linux-安装-Nginx.html">
             
                 <a href="Linux-安装-Nginx.html">
             
@@ -364,7 +364,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="10.3" data-path="静态文件-403-错误.html">
+        <li class="chapter " data-level="10.3" data-path="静态文件-403-错误.html">
             
                 <a href="静态文件-403-错误.html">
             
@@ -552,7 +552,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >静态文件 403 错误</a>
+        <a href=".." >Linux 安装 Nginx</a>
     </h1>
 </div>
 
@@ -567,43 +567,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><b></b>&#x9759;&#x6001;&#x6587;&#x4EF6; 403 &#x9519;&#x8BEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><b></b>&#x95EE;&#x9898;&#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x67E5;&#x89E3;&#x51B3;"><b></b>&#x6392;&#x67E5;&#x89E3;&#x51B3;</a></li></ul></ul></div><a href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2020-10-08 02:06:14</span></p>
-<h1 id="&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><a name="&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x6587;&#x4EF6;-403-&#x9519;&#x8BEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x6001;&#x6587;&#x4EF6; 403 &#x9519;&#x8BEF;</h1>
-<h2 id="&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><a name="&#x95EE;&#x9898;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#x8BB0;&#x5F55;</h2>
-<p>&#x914D;&#x7F6E;&#xFF1A;</p>
-<pre><code class="lang-nginx"><span class="hljs-section">server</span> {
-    <span class="hljs-attribute">listen</span> <span class="hljs-number">9233</span>;
-    <span class="hljs-attribute">charset</span> utf-<span class="hljs-number">8</span>;
-    <span class="hljs-attribute">access_log</span> <span class="hljs-string">&quot;/usr/local/nginx/logs/access.log&quot;</span>;
-    <span class="hljs-attribute">error_log</span> <span class="hljs-string">&quot;/usr/local/nginx/logs/error.log&quot;</span>;
-    <span class="hljs-attribute">set</span> <span class="hljs-variable">$dist_dir</span> <span class="hljs-string">&quot;/root/xxx/dist/&quot;</span>; <span class="hljs-comment"># root &#x6743;&#x9650;&#x7684;&#x76EE;&#x5F55;</span>
-    <span class="hljs-attribute">location</span> / {
-        <span class="hljs-attribute">alias</span> <span class="hljs-string">&quot;<span class="hljs-variable">$dist_dir</span>&quot;</span>;
-        <span class="hljs-attribute">expires</span> -<span class="hljs-number">1</span>;
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#linux-&#x5B89;&#x88C5;-nginx"><b></b>Linux &#x5B89;&#x88C5; Nginx</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;-demo"><b></b>&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo</a></li></ul></ul></ul></div><a href="#linux-&#x5B89;&#x88C5;-nginx" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2021-05-08 12:35:35</span></p>
+<h1 id="linux-&#x5B89;&#x88C5;-nginx"><a name="linux-&#x5B89;&#x88C5;-nginx" class="anchor-navigation-ex-anchor" href="#linux-&#x5B89;&#x88C5;-nginx"><i class="fa fa-link" aria-hidden="true"></i></a>Linux &#x5B89;&#x88C5; Nginx</h1>
+<h3 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;</span>
+wget http://nginx.org/download/nginx-1.19.10.tar.gz
+tar -xzvf nginx-1.19.10.tar.gz
+<span class="hljs-built_in">cd</span> nginx-1.19.10
+
+<span class="hljs-comment"># &#x914D;&#x7F6E;&#x5B89;&#x88C5;&#xFF08;YOUR_DIST_PATH &#x8BBE;&#x7F6E;&#x4E3A;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;../nginx-1.19.10-dist&#xFF09;</span>
+./configure --prefix=<span class="hljs-variable">${YOUR_DIST_PATH}</span> --user=<span class="hljs-variable">${USER}</span> --with-stream --with-stream=dynamic --with-stream_realip_module --without-http_rewrite_module --without-http_gzip_module
+make &amp;&amp; make install
+
+<span class="hljs-comment"># &#x914D;&#x7F6E; PATH</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PATH=<span class="hljs-variable">${PATH}</span>:<span class="hljs-variable">${YOUR_DIST_PATH}</span>/sbin&quot;</span> &gt;&gt; ~/.bash_profile
+<span class="hljs-built_in">source</span> ~/.bash_profile
+
+<span class="hljs-comment"># &#x542F;&#x52A8;&#xFF08;&#x975E; root &#x8D26;&#x53F7;&#x628A; 80 &#x7AEF;&#x53E3;&#x7684; server &#x6CE8;&#x91CA;&#x6389;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;&#x6CA1;&#x6743;&#x9650;&#x7ED1;&#x5B9A; 80 &#x7AEF;&#x53E3;&#xFF09;</span>
+nginx
+</code></pre>
+<h3 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;-demo"><a name="&#x914D;&#x7F6E;&#x6587;&#x4EF6;-demo" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;-demo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo</h3>
+<p>nginx &#x6839;&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo <code>conf/nginx.conf</code>&#xFF1A;</p>
+<pre><code class="lang-nginx"><span class="hljs-comment"># ...</span>
+<span class="hljs-attribute">load_module</span> modules/ngx_stream_module.so;
+<span class="hljs-comment"># ...</span>
+<span class="hljs-section">http</span> {
+    <span class="hljs-comment"># ...</span>
+    <span class="hljs-comment"># server { # &#x975E; root &#x8D26;&#x53F7;&#x628A; 80 &#x7AEF;&#x53E3;&#x7684; server &#x6CE8;&#x91CA;&#x6389;</span>
+    <span class="hljs-comment">#     # ...</span>
+    <span class="hljs-comment">#     listen       80;</span>
+    <span class="hljs-comment">#     # ...</span>
+    <span class="hljs-comment"># }</span>
+    <span class="hljs-comment"># ...</span>
+
+    <span class="hljs-attribute">include</span> include-l7/<span class="hljs-regexp">*.conf</span>; <span class="hljs-comment"># &#x4E03;&#x5C42;&#x4EE3;&#x7406;</span>
+}
+<span class="hljs-section">stream</span> {
+    <span class="hljs-attribute">include</span> include-l4/<span class="hljs-regexp">*.conf</span>; <span class="hljs-comment"># &#x56DB;&#x5C42;&#x4EE3;&#x7406;</span>
+}
+</code></pre>
+<p>&#x56DB;&#x5C42;&#x4EE3;&#x7406;&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo <code>conf/include-l4/db-proxy.conf</code>&#xFF1A;</p>
+<pre><code class="lang-nginx">server {
+    listen {LISTEN_PORT};
+    proxy_pass {REMOTE_HOST}:{REMOTE_PORT};
+}
+</code></pre>
+<p>&#x4E03;&#x5C42;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo <code>conf/include-l7/static.conf</code>&#xFF1A;</p>
+<pre><code class="lang-nginx">server {
+    listen {LISTEN_PORT};
+    charset utf-8;
+    # access_log &quot;{NGINX_LOG_DIR}/access.log&quot;;
+    # error_log &quot;{NGINX_LOG_DIR}/error.log&quot;;
+    location / {
+        root &quot;{YOUR_STATIC_PATH}&quot;; # &#x4EE5; / &#x7ED3;&#x5C3E;
+        expires -1;
     }
 }
 </code></pre>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x62A5; <code>Nginx 403</code>&#xFF0C;<code>error.log</code> &#x8BB0;&#x5F55;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#xFF1A;</p>
-<pre><code>2020/04/20 21:09:56 [error] 8374#0: *79668 &quot;/root/xxx/dist/index.html&quot; is forbidden (13: Permission denied), client: 10.252.148.50, server: , request: &quot;GET / HTTP/1.1&quot;, host: &quot;10.9.15.51:9233&quot;
-2020/04/20 21:09:56 [error] 8374#0: *79668 open() &quot;/root/xxx/dist/favicon.ico&quot; failed (13: Permission denied), client: 10.252.148.50, server: , request: &quot;GET /favicon.ico HTTP/1.1&quot;, host: &quot;10.9.15.51:9233&quot;, referrer: &quot;http://10.9.15.51:9233/&quot;
-</code></pre><h2 id="&#x6392;&#x67E5;&#x89E3;&#x51B3;"><a name="&#x6392;&#x67E5;&#x89E3;&#x51B3;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x67E5;&#x89E3;&#x51B3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x67E5;&#x89E3;&#x51B3;</h2>
-<p><code>ps -ef | grep nginx</code> &#x67E5;&#x770B; Nginx &#x542F;&#x52A8;&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>nginx worker</code> &#x8FDB;&#x7A0B;&#x662F;&#x7528; <code>nobody</code> &#x542F;&#x52A8;&#x7684;&#xFF1A;</p>
-<pre><code>root      5137     1  0  2019 ?        00:00:00 nginx: master process /usr/local/nginx/nginx
-nobody    8374  5137  0 21:09 ?        00:00:00 nginx: worker process 
-root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
-</code></pre><p>&#x56E0;&#x6B64;&#x9700;&#x8981;&#x5C06; Nginx &#x542F;&#x52A8;&#x7528;&#x6237;&#x6539;&#x4E3A; <code>root</code>&#xFF08;&#x548C;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x6743;&#x9650;&#x4E00;&#x81F4;&#xFF09;&#xFF0C;&#x4FEE;&#x6539; <code>$NGINX_HOME/nginx.conf</code>&#xFF1A;</p>
-<pre><code class="lang-nginx"><span class="hljs-comment"># &#x542F;&#x52A8;&#x7528;&#x6237;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x5219;&#x4E3A; nobody</span>
-<span class="hljs-attribute">user</span> root;
-<span class="hljs-comment"># &#x5176;&#x4ED6;&#x914D;&#x7F6E;...</span>
+<p>&#x4E03;&#x5C42;&#x540E;&#x7AEF;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x914D;&#x7F6E;&#x6587;&#x4EF6; Demo <code>conf/include-l7/upstream.conf</code>&#xFF1A;</p>
+<pre><code class="lang-nginx">upstream {UPSTREAM_NAME} {
+    server {REMOTE_SERVER_HOST}:{REMOTE_SERVER_PORT};
+    server {REMOTE_SERVER_HOST}:{REMOTE_SERVER_PORT};
+}
+server {
+    listen {LISTEN_PORT};
+    charset utf-8;
+    location / {
+        client_max_body_size 500m;
+        proxy_pass http://{UPSTREAM_NAME}/;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+    }
+}
 </code></pre>
-<p>&#x4FEE;&#x6539;&#x540E; <code>nginx -s reload</code>&#xFF0C;&#x518D;&#x67E5; <code>ps -ef | grep nginx</code>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x65B0;&#x7684; <code>nginx worker</code> &#x5DF2;&#x7ECF;&#x662F;&#x7528; <code>root</code> &#x542F;&#x52A8;&#x7684;&#x4E86;&#xFF1A;</p>
-<pre><code>root      5137     1  0  2019 ?        00:00:00 nginx: master process /usr/local/nginx/nginx
-nobody    8374  5137  0 21:09 ?        00:00:00 nginx: worker process is shutting down
-root     17824  5137  0 21:14 ?        00:00:00 nginx: worker process 
-root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
-</code></pre><p>&#x518D;&#x6B21;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x5230;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
-<p><br><br><div style="color:gray;">Copyright &#xA9; 2020 zhoutianju.<br>All rights reserved.</div></p>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -631,12 +670,12 @@ root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
 
             
                 
-                <a href="Linux-安装-Nginx.html" class="navigation navigation-prev " aria-label="Previous page: Linux 安装 Nginx">
+                <a href="Windows-安装-Nginx.html" class="navigation navigation-prev " aria-label="Previous page: Windows 安装 Nginx">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="URL-参数改为-path-重定向.html" class="navigation navigation-next " aria-label="Next page: URL 参数改为 path 重定向">
+                <a href="静态文件-403-错误.html" class="navigation navigation-next " aria-label="Next page: 静态文件 403 错误">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -647,7 +686,7 @@ root     18271  7332  0 21:15 pts/5    00:00:00 grep --color nginx
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"静态文件 403 错误","level":"10.3","depth":1,"next":{"title":"URL 参数改为 path 重定向","level":"10.4","depth":1,"path":"nginx/URL-参数改为-path-重定向.md","ref":"nginx/URL-参数改为-path-重定向.md","articles":[]},"previous":{"title":"Linux 安装 Nginx","level":"10.2","depth":1,"path":"nginx/Linux-安装-Nginx.md","ref":"nginx/Linux-安装-Nginx.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/静态文件-403-错误.md","mtime":"2020-10-07T18:06:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T06:05:26.387Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Linux 安装 Nginx","level":"10.2","depth":1,"next":{"title":"静态文件 403 错误","level":"10.3","depth":1,"path":"nginx/静态文件-403-错误.md","ref":"nginx/静态文件-403-错误.md","articles":[]},"previous":{"title":"Windows 安装 Nginx","level":"10.1","depth":1,"path":"nginx/Windows-安装-Nginx.md","ref":"nginx/Windows-安装-Nginx.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"nginx/Linux-安装-Nginx.md","mtime":"2021-05-08T04:35:35.905Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T06:05:26.387Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
