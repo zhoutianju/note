@@ -29,6 +29,9 @@
 ## GitBook
 * [安装](gitbook/安装.md)
 
+## MySQL
+* [账号授权](mysql/账号授权.md)
+
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)
 * [Linux 安装 Nginx](nginx/Linux-安装-Nginx.md)
