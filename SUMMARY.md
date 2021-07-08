@@ -4,6 +4,7 @@
 
 ## Maven
 * [高版本 Maven 检查依赖冲突](maven/高版本-Maven-检查依赖冲突.md)
+* [编译期常量替换](maven/编译器常量替换.md)
 
 ## Shell
 * [常用脚本片段](shell/常用脚本片段.md)

@@ -1,0 +1,796 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>编译期常量替换 · 个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../shell/常用脚本片段.html" />
+    
+    
+    <link rel="prev" href="高版本-Maven-检查依赖冲突.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../asset/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Maven</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="高版本-Maven-检查依赖冲突.html">
+            
+                <a href="高版本-Maven-检查依赖冲突.html">
+            
+                    
+                    高版本 Maven 检查依赖冲突
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="编译器常量替换.html">
+            
+                <a href="编译器常量替换.html">
+            
+                    
+                    编译期常量替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Shell</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../shell/常用脚本片段.html">
+            
+                <a href="../shell/常用脚本片段.html">
+            
+                    
+                    常用脚本片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../linux/CentOS-防火墙配置.html">
+            
+                <a href="../linux/CentOS-防火墙配置.html">
+            
+                    
+                    CentOS 防火墙配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mac</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../mac/brew-安装指定版本的软件.html">
+            
+                <a href="../mac/brew-安装指定版本的软件.html">
+            
+                    
+                    brew 安装指定版本的软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Windows</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../windows/CMD-修改字体为-Consolas-+-微软雅黑.html">
+            
+                <a href="../windows/CMD-修改字体为-Consolas-+-微软雅黑.html">
+            
+                    
+                    CMD 修改字体为 Consolas + 微软雅黑
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">WSL</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../wsl/开机时自动开启-WSL-ssh-服务.html">
+            
+                <a href="../wsl/开机时自动开启-WSL-ssh-服务.html">
+            
+                    
+                    开机时自动开启 WSL ssh 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../wsl/VPN-环境下-WSL-更新-DNS.html">
+            
+                <a href="../wsl/VPN-环境下-WSL-更新-DNS.html">
+            
+                    
+                    VPN 环境下 WSL 更新 DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../git/全局配置.html">
+            
+                <a href="../git/全局配置.html">
+            
+                    
+                    全局配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../git/常用命令.html">
+            
+                <a href="../git/常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../git/修改提交人、邮箱.html">
+            
+                <a href="../git/修改提交人、邮箱.html">
+            
+                    
+                    修改提交人、邮箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">GitBook</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../gitbook/安装.html">
+            
+                <a href="../gitbook/安装.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">MySQL</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../mysql/账号授权.html">
+            
+                <a href="../mysql/账号授权.html">
+            
+                    
+                    账号授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Nginx</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../nginx/Windows-安装-Nginx.html">
+            
+                <a href="../nginx/Windows-安装-Nginx.html">
+            
+                    
+                    Windows 安装 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../nginx/Linux-安装-Nginx.html">
+            
+                <a href="../nginx/Linux-安装-Nginx.html">
+            
+                    
+                    Linux 安装 Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="../nginx/静态文件-403-错误.html">
+            
+                <a href="../nginx/静态文件-403-错误.html">
+            
+                    
+                    静态文件 403 错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="../nginx/URL-参数改为-path-重定向.html">
+            
+                <a href="../nginx/URL-参数改为-path-重定向.html">
+            
+                    
+                    URL 参数改为 path 重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">RabbitMQ</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../rabbit-mq/Linux-安装-RabbitMQ.html">
+            
+                <a href="../rabbit-mq/Linux-安装-RabbitMQ.html">
+            
+                    
+                    Linux 安装 RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../rabbit-mq/RabbitMQ-HA-集群部署.html">
+            
+                <a href="../rabbit-mq/RabbitMQ-HA-集群部署.html">
+            
+                    
+                    RabbitMQ HA 集群部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">FTP</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ftp/vsftpd-安装、配置.html">
+            
+                <a href="../ftp/vsftpd-安装、配置.html">
+            
+                    
+                    vsftpd 安装、配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="../ftp/vsftpd-配置虚拟用户.html">
+            
+                <a href="../ftp/vsftpd-配置虚拟用户.html">
+            
+                    
+                    vsftpd 配置虚拟用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="../ftp/URL-访问加用户名、密码.html">
+            
+                <a href="../ftp/URL-访问加用户名、密码.html">
+            
+                    
+                    URL 访问加用户名、密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="../ftp/Windows-一键上传-FTP-脚本配置.html">
+            
+                <a href="../ftp/Windows-一键上传-FTP-脚本配置.html">
+            
+                    
+                    Windows 一键上传 FTP 脚本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">网络</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../网络/DNS-A-记录和-CNAME-记录.html">
+            
+                <a href="../网络/DNS-A-记录和-CNAME-记录.html">
+            
+                    
+                    DNS A 记录和 CNAME 记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂项</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../杂项/Kindle-电子书导出-PDF-格式.html">
+            
+                <a href="../杂项/Kindle-电子书导出-PDF-格式.html">
+            
+                    
+                    Kindle 电子书导出 PDF 格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >编译期常量替换</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;"><b></b>&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;</a></li><ul><li><span class="title-icon "></span><a href="#&#x80CC;&#x666F;"><b></b>&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><b></b>&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li><li><span class="title-icon "></span><a href="#idea-&#x73AF;&#x5883;&#x8BF4;&#x660E;"><b></b>IDEA &#x73AF;&#x5883;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x53C2;&#x8003;"><b></b>&#x4EE3;&#x7801;&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2021-07-08 18:22:19</span></p>
+<h1 id="&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;"><a name="&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1;&#x671F;&#x5E38;&#x91CF;&#x66FF;&#x6362;</h1>
+<h2 id="&#x80CC;&#x666F;"><a name="&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;</h2>
+<p>Java &#x4EE3;&#x7801;&#x4E2D;&#x6CE8;&#x89E3;&#x7684;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x7531;&#x4E8E;&#x6CE8;&#x89E3;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x5FC5;&#x987B;&#x662F; final &#x7684;&#x5E38;&#x91CF;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x6CD5;&#x901A;&#x8FC7;&#x4EFB;&#x4F55;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x624B;&#x6BB5;&#x8D4B;&#x503C;&#x6216;&#x4FEE;&#x6539;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;property &#x6CE8;&#x5165;&#x7B49;&#xFF09;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Table</span>(name = <span class="hljs-string">&quot;xxx&quot;</span>) <span class="hljs-comment">// &#x5E0C;&#x671B; dev &#x73AF;&#x5883;&#x4F7F;&#x7528; &quot;offline&quot;&#x3001;prod &#x73AF;&#x5883;&#x4F7F;&#x7528; &quot;online&quot;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> </span>{
+}
+</code></pre>
+<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a name="&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
+<p>&#x4F7F;&#x7528; Maven &#x63D2;&#x4EF6; <a href="https://www.mojohaus.org/templating-maven-plugin/" target="_blank">templating-maven-plugin</a></p>
+<p>&#x4EE3;&#x7801;&#x7ED3;&#x6784;</p>
+<pre><code>.
+&#x251C;&#x2500;&#x2500; pom.xml
+&#x2514;&#x2500;&#x2500; src
+    &#x2514;&#x2500;&#x2500; main
+        &#x251C;&#x2500;&#x2500; java
+        &#x2502;   &#x2514;&#x2500;&#x2500; priv
+        &#x2502;       &#x2514;&#x2500;&#x2500; zhoutj
+        &#x2502;           &#x2514;&#x2500;&#x2500; demo
+        &#x2502;               &#x251C;&#x2500;&#x2500; Demo.java
+        &#x2502;               &#x251C;&#x2500;&#x2500; Main.java
+        &#x2502;               &#x2514;&#x2500;&#x2500; annotation
+        &#x2502;                   &#x2514;&#x2500;&#x2500; Foo.java
+        &#x251C;&#x2500;&#x2500; java-dev # dev &#x73AF;&#x5883;&#x7F16;&#x8BD1;&#x65F6;&#x4F7F;&#x7528;
+        &#x2502;   &#x2514;&#x2500;&#x2500; priv
+        &#x2502;       &#x2514;&#x2500;&#x2500; zhoutj
+        &#x2502;           &#x2514;&#x2500;&#x2500; demo
+        &#x2502;               &#x2514;&#x2500;&#x2500; EnvConstant.java
+        &#x2514;&#x2500;&#x2500; java-prod # prod &#x73AF;&#x5883;&#x7F16;&#x8BD1;&#x65F6;&#x4F7F;&#x7528;
+            &#x2514;&#x2500;&#x2500; priv
+                &#x2514;&#x2500;&#x2500; zhoutj
+                    &#x2514;&#x2500;&#x2500; demo
+                        &#x2514;&#x2500;&#x2500; EnvConstant.java
+</code></pre><p><code>src/main/java/priv/zhoutj/demo/Demo.java</code></p>
+<pre><code class="lang-java"><span class="hljs-meta">@Foo</span>(name = EnvConstant.VALUE)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo</span> </span>{
+}
+</code></pre>
+<p><code>src/main/java-dev/priv/zhoutj/demo/EnvConstant.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EnvConstant</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String VALUE = <span class="hljs-string">&quot;offline&quot;</span>;
+}
+</code></pre>
+<p><code>src/main/java-prod/priv/zhoutj/demo/EnvConstant.java</code></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EnvConstant</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String VALUE = <span class="hljs-string">&quot;online&quot;</span>;
+}
+</code></pre>
+<p><code>pom.xml</code></p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>priv.zhoutj.demo<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>demo-compile-time-constant-replace<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.codehaus.mojo<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>templating-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">executions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">execution</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>filter-src<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">goals</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">goal</span>&gt;</span>filter-sources<span class="hljs-tag">&lt;/<span class="hljs-name">goal</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">goals</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">overwrite</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">overwrite</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">sourceDirectory</span>&gt;</span>${basedir}/src/main/java-${profiles.active}<span class="hljs-tag">&lt;/<span class="hljs-name">sourceDirectory</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">outputDirectory</span>&gt;</span>${project.build.directory}/java-templates-generated-sources<span class="hljs-tag">&lt;/<span class="hljs-name">outputDirectory</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">execution</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">executions</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">profiles.active</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-name">profiles.active</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">activation</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">activeByDefault</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">activation</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>prod<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">profiles.active</span>&gt;</span>prod<span class="hljs-tag">&lt;/<span class="hljs-name">profiles.active</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">profiles</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<h2 id="idea-&#x73AF;&#x5883;&#x8BF4;&#x660E;"><a name="idea-&#x73AF;&#x5883;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#idea-&#x73AF;&#x5883;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>IDEA &#x73AF;&#x5883;&#x8BF4;&#x660E;</h2>
+<p>IDEA &#x73AF;&#x5883;&#x4E0B;&#x9700;&#x8981;&#x5C06; <code>src/main/java-prod</code> &#x6216; <code>src/main/java-dev</code> &#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x52A0;&#x5165;&#x5230; source &#x6839;&#x76EE;&#x5F55;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x624D;&#x80FD;&#x5728; IDEA &#x4E2D; run/debug</p>
+<p>&#x53EF;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.jetbrains.com/help/idea/content-roots.html#adding_content_root" target="_blank">https://www.jetbrains.com/help/idea/content-roots.html#adding_content_root</a></p>
+<h2 id="&#x4EE3;&#x7801;&#x53C2;&#x8003;"><a name="&#x4EE3;&#x7801;&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EE3;&#x7801;&#x53C2;&#x8003;</h2>
+<p><a href="https://github.com/zhoutianju/demo-compile-time-constant-replace" target="_blank">https://github.com/zhoutianju/demo-compile-time-constant-replace</a></p>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="高版本-Maven-检查依赖冲突.html" class="navigation navigation-prev " aria-label="Previous page: 高版本 Maven 检查依赖冲突">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../shell/常用脚本片段.html" class="navigation navigation-next " aria-label="Next page: 常用脚本片段">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"编译期常量替换","level":"2.2","depth":1,"next":{"title":"常用脚本片段","level":"3.1","depth":1,"path":"shell/常用脚本片段.md","ref":"shell/常用脚本片段.md","articles":[]},"previous":{"title":"高版本 Maven 检查依赖冲突","level":"2.1","depth":1,"path":"maven/高版本-Maven-检查依赖冲突.md","ref":"maven/高版本-Maven-检查依赖冲突.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"maven/编译器常量替换.md","mtime":"2021-07-08T10:22:19.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-08T10:22:24.277Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
