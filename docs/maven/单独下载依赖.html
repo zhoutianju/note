@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>DNS A 记录和 CNAME 记录 · 个人笔记</title>
+        <title>单独下载依赖 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../杂项/Kindle-电子书导出-PDF-格式.html" />
+    <link rel="next" href="../shell/常用脚本片段.html" />
     
     
-    <link rel="prev" href="../ftp/Windows-一键上传-FTP-脚本配置.html" />
+    <link rel="prev" href="编译器常量替换.html" />
     
 
     
@@ -139,9 +139,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../maven/高版本-Maven-检查依赖冲突.html">
+        <li class="chapter " data-level="2.1" data-path="高版本-Maven-检查依赖冲突.html">
             
-                <a href="../maven/高版本-Maven-检查依赖冲突.html">
+                <a href="高版本-Maven-检查依赖冲突.html">
             
                     
                     高版本 Maven 检查依赖冲突
@@ -152,9 +152,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../maven/编译器常量替换.html">
+        <li class="chapter " data-level="2.2" data-path="编译器常量替换.html">
             
-                <a href="../maven/编译器常量替换.html">
+                <a href="编译器常量替换.html">
             
                     
                     编译期常量替换
@@ -165,9 +165,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../maven/单独下载依赖.html">
+        <li class="chapter active" data-level="2.3" data-path="单独下载依赖.html">
             
-                <a href="../maven/单独下载依赖.html">
+                <a href="单独下载依赖.html">
             
                     
                     单独下载依赖
@@ -535,9 +535,9 @@
         
         
     
-        <li class="chapter active" data-level="14.1" data-path="DNS-A-记录和-CNAME-记录.html">
+        <li class="chapter " data-level="14.1" data-path="../网络/DNS-A-记录和-CNAME-记录.html">
             
-                <a href="DNS-A-记录和-CNAME-记录.html">
+                <a href="../网络/DNS-A-记录和-CNAME-记录.html">
             
                     
                     DNS A 记录和 CNAME 记录
@@ -598,7 +598,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >DNS A 记录和 CNAME 记录</a>
+        <a href=".." >单独下载依赖</a>
     </h1>
 </div>
 
@@ -613,15 +613,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#dns-a-&#x8BB0;&#x5F55;&#x548C;-cname-&#x8BB0;&#x5F55;"><b></b>DNS A &#x8BB0;&#x5F55;&#x548C; CNAME &#x8BB0;&#x5F55;</a></li><ul><li><span class="title-icon "></span><a href="#a-&#x8BB0;&#x5F55;"><b></b>A &#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#cname-&#x8BB0;&#x5F55;"><b></b>CNAME &#x8BB0;&#x5F55;</a></li></ul></ul></div><a href="#dns-a-&#x8BB0;&#x5F55;&#x548C;-cname-&#x8BB0;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2021-02-05 14:34:39</span></p>
-<h1 id="dns-a-&#x8BB0;&#x5F55;&#x548C;-cname-&#x8BB0;&#x5F55;"><a name="dns-a-&#x8BB0;&#x5F55;&#x548C;-cname-&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#dns-a-&#x8BB0;&#x5F55;&#x548C;-cname-&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS A &#x8BB0;&#x5F55;&#x548C; CNAME &#x8BB0;&#x5F55;</h1>
-<h2 id="a-&#x8BB0;&#x5F55;"><a name="a-&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#a-&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>A &#x8BB0;&#x5F55;</h2>
-<p>A &#x8BB0;&#x5F55;&#xFF08;Adress &#x8BB0;&#x5F55;&#xFF09;&#xFF0C;&#x521B;&#x5EFA;&#x57DF;&#x540D;&#x548C; IP &#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x57DF;&#x540D;&#x7684;&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#x3002;</p>
-<p>A &#x8BB0;&#x5F55;&#x7528;&#x9014;&#xFF1A;&#x53EF;&#x4EE5;&#x5728;&#x8F93;&#x5165;&#x57DF;&#x540D;&#x65F6;&#x4E0D;&#x7528;&#x8F93;&#x5165; <code>WWW.</code> &#x6765;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x3002;</p>
-<h2 id="cname-&#x8BB0;&#x5F55;"><a name="cname-&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#cname-&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>CNAME &#x8BB0;&#x5F55;</h2>
-<p>CNAME &#x8BB0;&#x5F55;&#xFF08;&#x522B;&#x540D;&#x8BB0;&#x5F55;&#xFF09;&#xFF0C;&#x521B;&#x5EFA;&#x57DF;&#x540D;&#x5230;&#x53E6;&#x5916;&#x57DF;&#x540D;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x540C;&#x65F6;&#x63D0;&#x4F9B; WWW &#x548C; MAIL &#x670D;&#x52A1;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6709;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x540D;&#x4E3A; <code>host.mydomain.com</code>&#xFF08;A &#x8BB0;&#x5F55;&#xFF09;&#x3002;&#x5B83;&#x540C;&#x65F6;&#x63D0;&#x4F9B; WWW &#x548C; MAIL &#x670D;&#x52A1;&#xFF0C;&#x4E3A;&#x4E86;&#x4FBF;&#x4E8E;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x3002;&#x53EF;&#x4EE5;&#x4E3A;&#x8BE5;&#x8BA1;&#x7B97;&#x673A;&#x8BBE;&#x7F6E;&#x4E24;&#x4E2A;&#x522B;&#x540D;&#xFF08;CNAME&#xFF09;&#xFF1A;WWW &#x548C; MAIL&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x522B;&#x540D;&#x7684;&#x5168;&#x79F0;&#x5C31; <code>http://www.mydomain.com/</code> &#x548C; <code>mail.mydomain.com</code>&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x4ED6;&#x4EEC;&#x90FD;&#x6307;&#x5411; <code>host.mydomain.com</code>&#x3002;</p>
-<p>CNAME &#x8BB0;&#x5F55;&#x7528;&#x9014;&#xFF1A;CNAME &#x5C06;&#x51E0;&#x4E2A;&#x4E3B;&#x673A;&#x540D;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF0C;&#x5176;&#x5B9E;&#x8DDF;&#x6307;&#x5411; IP &#x5730;&#x5740;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x522B;&#x540D;&#x4E5F;&#x8981;&#x505A;&#x4E00;&#x4E2A; A &#x8BB0;&#x5F55;&#x7684;&#x3002;&#x4F46;&#x662F;&#x4F7F;&#x7528; CNAME &#x8BB0;&#x5F55;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x53D8;&#x66F4; IP &#x5730;&#x5740;&#x3002;&#x5982;&#x679C;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x6709;100&#x4E2A;&#x7F51;&#x7AD9;&#xFF0C;&#x4ED6;&#x4EEC;&#x90FD;&#x505A;&#x4E86;&#x522B;&#x540D;&#xFF0C;&#x8BE5;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x53D8;&#x66F4; IP &#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x53D8;&#x66F4;&#x522B;&#x540D;&#x7684; A &#x8BB0;&#x5F55;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;"><b></b>&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;</a></li></ul></div><a href="#&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2021-07-16 16:50:20</span></p>
+<h1 id="&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;"><a name="&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;</h1>
+<p>&#x4F7F;&#x7528; maven-dependency-plugin <a href="https://maven.apache.org/plugins/maven-dependency-plugin/get-mojo.html" target="_blank">get &#x5B50;&#x547D;&#x4EE4;</a>&#x5355;&#x72EC;&#x4E0B;&#x8F7D;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-bash">groupId=package.you.want
+artifactId=artifact-you-want
+version=1.2.3
+transitive=<span class="hljs-literal">false</span> <span class="hljs-comment"># &#x662F;&#x5426;&#x7EA7;&#x8054;&#x4E0B;&#x8F7D;&#xFF0C;&#x9ED8;&#x8BA4; true</span>
+mvn dependency:get -Dartifact=<span class="hljs-variable">${groupId}</span>:<span class="hljs-variable">${artifactId}</span>:<span class="hljs-variable">${version}</span> -Dtransitive=<span class="hljs-variable">${transitive}</span>
+</code></pre>
 <p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
@@ -650,12 +650,12 @@
 
             
                 
-                <a href="../ftp/Windows-一键上传-FTP-脚本配置.html" class="navigation navigation-prev " aria-label="Previous page: Windows 一键上传 FTP 脚本配置">
+                <a href="编译器常量替换.html" class="navigation navigation-prev " aria-label="Previous page: 编译期常量替换">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../杂项/Kindle-电子书导出-PDF-格式.html" class="navigation navigation-next " aria-label="Next page: Kindle 电子书导出 PDF 格式">
+                <a href="../shell/常用脚本片段.html" class="navigation navigation-next " aria-label="Next page: 常用脚本片段">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -666,7 +666,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DNS A 记录和 CNAME 记录","level":"14.1","depth":1,"next":{"title":"Kindle 电子书导出 PDF 格式","level":"15.1","depth":1,"path":"杂项/Kindle-电子书导出-PDF-格式.md","ref":"杂项/Kindle-电子书导出-PDF-格式.md","articles":[]},"previous":{"title":"Windows 一键上传 FTP 脚本配置","level":"13.4","depth":1,"path":"ftp/Windows-一键上传-FTP-脚本配置.md","ref":"ftp/Windows-一键上传-FTP-脚本配置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"网络/DNS-A-记录和-CNAME-记录.md","mtime":"2021-02-05T06:34:39.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T08:51:01.897Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"单独下载依赖","level":"2.3","depth":1,"next":{"title":"常用脚本片段","level":"3.1","depth":1,"path":"shell/常用脚本片段.md","ref":"shell/常用脚本片段.md","articles":[]},"previous":{"title":"编译期常量替换","level":"2.2","depth":1,"path":"maven/编译器常量替换.md","ref":"maven/编译器常量替换.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"maven/单独下载依赖.md","mtime":"2021-07-16T08:50:20.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T08:51:01.897Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
