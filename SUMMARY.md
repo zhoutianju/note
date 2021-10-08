@@ -33,6 +33,7 @@
 
 ## MySQL
 * [账号授权](mysql/账号授权.md)
+* [mysqldump](mysql/mysqldump.md)
 
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)
