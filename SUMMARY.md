@@ -13,6 +13,7 @@
 ## Linux
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 * [logrotate 切割日志](linux/logrotate-切割日志.md)
+* [screen](linux/screen.md)
 
 ## Mac
 * [brew 安装指定版本的软件](mac/brew-安装指定版本的软件.md)
