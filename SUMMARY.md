@@ -18,6 +18,7 @@
 ## Mac
 * [brew 安装指定版本的软件](mac/brew-安装指定版本的软件.md)
 * [Mac 应用程序使用的环境版本](mac/Mac-应用程序使用的环境版本.md)
+* [根目录创建软链](mac/根目录创建软链.md)
 
 ## Windows
 * [CMD 修改字体为 Consolas + 微软雅黑](windows/CMD-修改字体为-Consolas-+-微软雅黑.md)
