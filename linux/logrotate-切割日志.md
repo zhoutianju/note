@@ -36,7 +36,8 @@ CentOS 6.5（非 root 权限）、Tomcat 6.0.35、logrotate 3.15.1（由于后�
 /home/hadoop/apache-tomcat-6.0.35/logs/catalina.out {
     rotate 7
     dateext
-    dateyesterday # 这个参数高版本的logrotate才支持
+    dateyesterday # 3.8.6 版本开始支持
+    # datehourago # 3.14.0 版本开始支持
     dateformat .%Y%m%d
     notifempty
     missingok
@@ -61,15 +62,21 @@ logrotate的 `-v` 参数用于真正执行文件切分同时打印详细日志
 ### cron配置
 
 ```
-# Tomcat catalina.out logrotate
-0 0 * * * /home/hadoop/bin/logrotate -s /tmp/logrotate.status -f /home/hadoop/apache-tomcat-6.0.35/tomcat-log-cut
+# daily
+0 0 * * * cd /your/conf/logrotate && /your/bin/logrotate -s daily.status -f daily.conf
+# hourly
+0 * * * * cd /your/conf/logrotate && /your/bin/logrotate -s hourly.status -f hourly.conf
 ```
 
 ## 遇到的几个坑
 
+### 全路径
+
+crontab 脚本中需要使用全路径，包括命令和文件，建议参考上面的模版配置
+
 ### root 权限
 
-logrotate 默认使用 `/var/lib/logrotate.status` 记录状态，需要root权限，可使用 `-s /xxx/logrotate.status`参数来指定其他有权限的文件记录状态
+logrotate 默认使用 `/var/lib/logrotate.status` 记录状态，需要root权限，可使用 `-s /xxx/logrotate.status` 参数来指定其他有权限的文件记录状态
 
 ### 每日执行时间
 
