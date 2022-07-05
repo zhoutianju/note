@@ -22,6 +22,7 @@
 
 ## Windows
 * [CMD 修改字体为 Consolas + 微软雅黑](windows/CMD-修改字体为-Consolas-+-微软雅黑.md)
+* [创建软链](windows/创建软链.md)
 
 ## WSL
 * [开机时自动开启 WSL ssh 服务](wsl/开机时自动开启-WSL-ssh-服务.md)
