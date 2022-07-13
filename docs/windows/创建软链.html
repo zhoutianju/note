@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>VPN 环境下 WSL 更新 DNS · 个人笔记</title>
+        <title>创建软链 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../git/全局配置.html" />
+    <link rel="next" href="../wsl/开机时自动开启-WSL-ssh-服务.html" />
     
     
-    <link rel="prev" href="开机时自动开启-WSL-ssh-服务.html" />
+    <link rel="prev" href="CMD-修改字体为-Consolas-+-微软雅黑.html" />
     
 
     
@@ -310,9 +310,9 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../windows/CMD-修改字体为-Consolas-+-微软雅黑.html">
+        <li class="chapter " data-level="6.1" data-path="CMD-修改字体为-Consolas-+-微软雅黑.html">
             
-                <a href="../windows/CMD-修改字体为-Consolas-+-微软雅黑.html">
+                <a href="CMD-修改字体为-Consolas-+-微软雅黑.html">
             
                     
                     CMD 修改字体为 Consolas + 微软雅黑
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../windows/创建软链.html">
+        <li class="chapter active" data-level="6.2" data-path="创建软链.html">
             
-                <a href="../windows/创建软链.html">
+                <a href="创建软链.html">
             
                     
                     创建软链
@@ -343,9 +343,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="开机时自动开启-WSL-ssh-服务.html">
+        <li class="chapter " data-level="7.1" data-path="../wsl/开机时自动开启-WSL-ssh-服务.html">
             
-                <a href="开机时自动开启-WSL-ssh-服务.html">
+                <a href="../wsl/开机时自动开启-WSL-ssh-服务.html">
             
                     
                     开机时自动开启 WSL ssh 服务
@@ -356,9 +356,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.2" data-path="VPN-环境下-WSL-更新-DNS.html">
+        <li class="chapter " data-level="7.2" data-path="../wsl/VPN-环境下-WSL-更新-DNS.html">
             
-                <a href="VPN-环境下-WSL-更新-DNS.html">
+                <a href="../wsl/VPN-环境下-WSL-更新-DNS.html">
             
                     
                     VPN 环境下 WSL 更新 DNS
@@ -729,7 +729,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >VPN 环境下 WSL 更新 DNS</a>
+        <a href=".." >创建软链</a>
     </h1>
 </div>
 
@@ -744,17 +744,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><b></b>VPN &#x73AF;&#x5883;&#x4E0B; WSL &#x66F4;&#x65B0; DNS</a></li><ul><li><span class="title-icon "></span><a href="#&#x80CC;&#x666F;"><b></b>&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><b></b>&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li></ul></ul></div><a href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2021-02-05 14:34:39</span></p>
-<h1 id="vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><a name="vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns" class="anchor-navigation-ex-anchor" href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><i class="fa fa-link" aria-hidden="true"></i></a>VPN &#x73AF;&#x5883;&#x4E0B; WSL &#x66F4;&#x65B0; DNS</h1>
-<h2 id="&#x80CC;&#x666F;"><a name="&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;</h2>
-<p>&#x7531;&#x4E8E;&#x5728;&#x516C;&#x53F8;&#x9700;&#x8981;&#x94FE;&#x63A5; VPN&#xFF0C;&#x94FE;&#x63A5;&#x540E; VPN &#x8BBE;&#x7F6E;&#x4E86; DNS&#xFF0C;&#x4F46;&#x6BCF;&#x6B21; WSL &#x542F;&#x52A8;&#x4F1A;&#x91CD;&#x7F6E; DNS &#x914D;&#x7F6E;&#xFF08;<code>/etc/resolv.conf</code>&#xFF09;&#xFF0C;&#x65E0;&#x6CD5;&#x540C;&#x6B65; Windows &#x914D;&#x7F6E;</p>
-<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a name="&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
-<p>&#x5728;&#x7EC8;&#x7AEF;&#x767B;&#x5F55;&#x811A;&#x672C;&#x4E2D;&#x589E;&#x52A0;&#x4ECE; Windows &#x540C;&#x6B65; DNS &#x7684;&#x547D;&#x4EE4;&#xFF08;WSL &#x662F;&#x53EF;&#x4EE5;&#x6267;&#x884C; Windows <code>ipconfig</code> &#x547D;&#x4EE4;&#x7684;&#xFF09;</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;/mnt/c/Windows/system32/ipconfig.exe /all | iconv -f gbk -t utf-8 | grep &quot;DNS &#x670D;&#x52A1;&#x5668;&quot; | cut -d &quot;:&quot; -f 2 | grep -e &quot;^ [0-9]&quot; | sed &quot;s/^/nameserver/&quot; | sudo tee /etc/resolv.conf &gt; /dev/null&apos;</span> &gt;&gt; ~/.bash_profile
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x8F6F;&#x94FE;"><b></b>&#x521B;&#x5EFA;&#x8F6F;&#x94FE;</a></li></ul></div><a href="#&#x521B;&#x5EFA;&#x8F6F;&#x94FE;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju001
+, 2022-07-05 17:41:24</span></p>
+<h1 id="&#x521B;&#x5EFA;&#x8F6F;&#x94FE;"><a name="&#x521B;&#x5EFA;&#x8F6F;&#x94FE;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x8F6F;&#x94FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8F6F;&#x94FE;</h1>
+<p>&#x6587;&#x4EF6;&#x8F6F;&#x94FE;</p>
+<pre><code class="lang-batch">set LINK_NAME=&quot;C:\Users\zhoutianju\.bash_profile_windows&quot;
+set TARGET=&quot;C:\Users\zhoutianju\Dropbox\home\.bash_profile_windows&quot;
+
+type %LINK_NAME%
+type %TARGET%
+
+del /q %LINK_NAME%
+mklink /d %LINK_NAME% %TARGET%
 </code></pre>
-<p><strong>&#x5177;&#x4F53;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x53D6;&#x51B3;&#x4E8E;&#x4F60; Windows &#x7684; <code>ipconfig</code> &#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4EE5;&#x53CA;&#x4F60;&#x672C;&#x5730;&#x7684;&#x7F51;&#x7EDC;&#x73AF;&#x5883;</strong></p>
-<p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
+<p>&#x76EE;&#x5F55;&#x8F6F;&#x94FE;</p>
+<pre><code class="lang-batch">set LINK_NAME=&quot;C:\Users\zhoutianju\bin&quot;
+set TARGET=&quot;C:\Users\zhoutianju\Dropbox\bin&quot;
+
+dir %LINK_NAME%
+dir %TARGET%
+
+rmdir /s /q %LINK_NAME%
+mklink /d %LINK_NAME% %TARGET%
+</code></pre>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2022 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -782,12 +795,12 @@
 
             
                 
-                <a href="开机时自动开启-WSL-ssh-服务.html" class="navigation navigation-prev " aria-label="Previous page: 开机时自动开启 WSL ssh 服务">
+                <a href="CMD-修改字体为-Consolas-+-微软雅黑.html" class="navigation navigation-prev " aria-label="Previous page: CMD 修改字体为 Consolas + 微软雅黑">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../git/全局配置.html" class="navigation navigation-next " aria-label="Next page: 全局配置">
+                <a href="../wsl/开机时自动开启-WSL-ssh-服务.html" class="navigation navigation-next " aria-label="Next page: 开机时自动开启 WSL ssh 服务">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -798,7 +811,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VPN 环境下 WSL 更新 DNS","level":"7.2","depth":1,"next":{"title":"全局配置","level":"8.1","depth":1,"path":"git/全局配置.md","ref":"git/全局配置.md","articles":[]},"previous":{"title":"开机时自动开启 WSL ssh 服务","level":"7.1","depth":1,"path":"wsl/开机时自动开启-WSL-ssh-服务.md","ref":"wsl/开机时自动开启-WSL-ssh-服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"wsl/VPN-环境下-WSL-更新-DNS.md","mtime":"2021-02-05T06:34:39.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-13T06:23:31.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建软链","level":"6.2","depth":1,"next":{"title":"开机时自动开启 WSL ssh 服务","level":"7.1","depth":1,"path":"wsl/开机时自动开启-WSL-ssh-服务.md","ref":"wsl/开机时自动开启-WSL-ssh-服务.md","articles":[]},"previous":{"title":"CMD 修改字体为 Consolas + 微软雅黑","level":"6.1","depth":1,"path":"windows/CMD-修改字体为-Consolas-+-微软雅黑.md","ref":"windows/CMD-修改字体为-Consolas-+-微软雅黑.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"windows/创建软链.md","mtime":"2022-07-05T09:41:24.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-13T06:23:31.084Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

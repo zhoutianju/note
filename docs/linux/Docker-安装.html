@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>VPN 环境下 WSL 更新 DNS · 个人笔记</title>
+        <title>Docker 安装 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../git/全局配置.html" />
+    <link rel="next" href="../mac/brew-安装指定版本的软件.html" />
     
     
-    <link rel="prev" href="开机时自动开启-WSL-ssh-服务.html" />
+    <link rel="prev" href="screen.html" />
     
 
     
@@ -205,9 +205,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../linux/CentOS-防火墙配置.html">
+        <li class="chapter " data-level="4.1" data-path="CentOS-防火墙配置.html">
             
-                <a href="../linux/CentOS-防火墙配置.html">
+                <a href="CentOS-防火墙配置.html">
             
                     
                     CentOS 防火墙配置
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../linux/logrotate-切割日志.html">
+        <li class="chapter " data-level="4.2" data-path="logrotate-切割日志.html">
             
-                <a href="../linux/logrotate-切割日志.html">
+                <a href="logrotate-切割日志.html">
             
                     
                     logrotate 切割日志
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../linux/screen.html">
+        <li class="chapter " data-level="4.3" data-path="screen.html">
             
-                <a href="../linux/screen.html">
+                <a href="screen.html">
             
                     
                     screen
@@ -244,9 +244,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../linux/Docker-安装.html">
+        <li class="chapter active" data-level="4.4" data-path="Docker-安装.html">
             
-                <a href="../linux/Docker-安装.html">
+                <a href="Docker-安装.html">
             
                     
                     Docker 安装
@@ -343,9 +343,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="开机时自动开启-WSL-ssh-服务.html">
+        <li class="chapter " data-level="7.1" data-path="../wsl/开机时自动开启-WSL-ssh-服务.html">
             
-                <a href="开机时自动开启-WSL-ssh-服务.html">
+                <a href="../wsl/开机时自动开启-WSL-ssh-服务.html">
             
                     
                     开机时自动开启 WSL ssh 服务
@@ -356,9 +356,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.2" data-path="VPN-环境下-WSL-更新-DNS.html">
+        <li class="chapter " data-level="7.2" data-path="../wsl/VPN-环境下-WSL-更新-DNS.html">
             
-                <a href="VPN-环境下-WSL-更新-DNS.html">
+                <a href="../wsl/VPN-环境下-WSL-更新-DNS.html">
             
                     
                     VPN 环境下 WSL 更新 DNS
@@ -729,7 +729,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >VPN 环境下 WSL 更新 DNS</a>
+        <a href=".." >Docker 安装</a>
     </h1>
 </div>
 
@@ -744,17 +744,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><b></b>VPN &#x73AF;&#x5883;&#x4E0B; WSL &#x66F4;&#x65B0; DNS</a></li><ul><li><span class="title-icon "></span><a href="#&#x80CC;&#x666F;"><b></b>&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><b></b>&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li></ul></ul></div><a href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2021-02-05 14:34:39</span></p>
-<h1 id="vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><a name="vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns" class="anchor-navigation-ex-anchor" href="#vpn-&#x73AF;&#x5883;&#x4E0B;-wsl-&#x66F4;&#x65B0;-dns"><i class="fa fa-link" aria-hidden="true"></i></a>VPN &#x73AF;&#x5883;&#x4E0B; WSL &#x66F4;&#x65B0; DNS</h1>
-<h2 id="&#x80CC;&#x666F;"><a name="&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;</h2>
-<p>&#x7531;&#x4E8E;&#x5728;&#x516C;&#x53F8;&#x9700;&#x8981;&#x94FE;&#x63A5; VPN&#xFF0C;&#x94FE;&#x63A5;&#x540E; VPN &#x8BBE;&#x7F6E;&#x4E86; DNS&#xFF0C;&#x4F46;&#x6BCF;&#x6B21; WSL &#x542F;&#x52A8;&#x4F1A;&#x91CD;&#x7F6E; DNS &#x914D;&#x7F6E;&#xFF08;<code>/etc/resolv.conf</code>&#xFF09;&#xFF0C;&#x65E0;&#x6CD5;&#x540C;&#x6B65; Windows &#x914D;&#x7F6E;</p>
-<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a name="&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h2>
-<p>&#x5728;&#x7EC8;&#x7AEF;&#x767B;&#x5F55;&#x811A;&#x672C;&#x4E2D;&#x589E;&#x52A0;&#x4ECE; Windows &#x540C;&#x6B65; DNS &#x7684;&#x547D;&#x4EE4;&#xFF08;WSL &#x662F;&#x53EF;&#x4EE5;&#x6267;&#x884C; Windows <code>ipconfig</code> &#x547D;&#x4EE4;&#x7684;&#xFF09;</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;/mnt/c/Windows/system32/ipconfig.exe /all | iconv -f gbk -t utf-8 | grep &quot;DNS &#x670D;&#x52A1;&#x5668;&quot; | cut -d &quot;:&quot; -f 2 | grep -e &quot;^ [0-9]&quot; | sed &quot;s/^/nameserver/&quot; | sudo tee /etc/resolv.conf &gt; /dev/null&apos;</span> &gt;&gt; ~/.bash_profile
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#docker-&#x5B89;&#x88C5;"><b></b>Docker &#x5B89;&#x88C5;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;"><b></b>&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#yum-&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;"><b></b>yum &#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;</a></li></ul></ul></ul></div><a href="#docker-&#x5B89;&#x88C5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2022-07-13 14:20:56</span></p>
+<h1 id="docker-&#x5B89;&#x88C5;"><a name="docker-&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#docker-&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>Docker &#x5B89;&#x88C5;</h1>
+<h3 id="&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;"><a name="&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x6210;&#x811A;&#x672C;&#x5B89;&#x88C5;</h3>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<a href="https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script" target="_blank">https://docs.docker.com/engine/install/centos/#install-using-the-convenience-script</a></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x66F4;&#x65B0; yum</span>
+yum update -y
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91; yum &#x955C;&#x50CF;&#x5B89;&#x88C5; docker</span>
+curl -fsSL https://get.docker.com | bash <span class="hljs-_">-s</span> docker --mirror Aliyun
+
+<span class="hljs-comment"># &#x542F;&#x52A8; docker &#x7CFB;&#x7EDF;&#x670D;&#x52A1;</span>
+systemctl start docker
+<span class="hljs-comment"># &#x67E5;&#x8BE2; docker &#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x72B6;&#x6001;</span>
+systemctl status docker
+<span class="hljs-comment"># &#x5173;&#x95ED; docker &#x7CFB;&#x7EDF;&#x670D;&#x52A1;</span>
+<span class="hljs-comment"># systemctl stop docker</span>
+<span class="hljs-comment"># &#x524D;&#x53F0;&#x8FD0;&#x884C; dockerd</span>
+<span class="hljs-comment"># dockerd</span>
+
+<span class="hljs-comment"># docker hello-world &#x6D4B;&#x8BD5;</span>
+docker run hello-world
 </code></pre>
-<p><strong>&#x5177;&#x4F53;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x53D6;&#x51B3;&#x4E8E;&#x4F60; Windows &#x7684; <code>ipconfig</code> &#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4EE5;&#x53CA;&#x4F60;&#x672C;&#x5730;&#x7684;&#x7F51;&#x7EDC;&#x73AF;&#x5883;</strong></p>
-<p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
+<h3 id="yum-&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;"><a name="yum-&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;" class="anchor-navigation-ex-anchor" href="#yum-&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>yum &#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#xFF09;</h3>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<a href="https://docs.docker.com/engine/install/centos/#install-using-the-repository" target="_blank">https://docs.docker.com/engine/install/centos/#install-using-the-repository</a></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5B89;&#x88C5; yum-utils</span>
+yum install -y yum-utils
+
+<span class="hljs-comment"># yum add-repo</span>
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+<span class="hljs-comment"># yum &#x5B89;&#x88C5; docker</span>
+yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+</code></pre>
+<p>yum &#x5E93;&#x76F8;&#x5173;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5217;&#x51FA;&#x76EE;&#x524D;&#x6240;&#x6709; yum &#x5E93;</span>
+yum repolist all
+
+<span class="hljs-comment"># yum disable</span>
+yum-config-manager --disable beike-salt-3000 
+yum-config-manager --disable centos-extras
+
+<span class="hljs-comment"># yum enable</span>
+yum-config-manager --enable lianjia-extras
+yum-config-manager --enable lianjia-base
+</code></pre>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2022 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -782,12 +817,12 @@
 
             
                 
-                <a href="开机时自动开启-WSL-ssh-服务.html" class="navigation navigation-prev " aria-label="Previous page: 开机时自动开启 WSL ssh 服务">
+                <a href="screen.html" class="navigation navigation-prev " aria-label="Previous page: screen">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../git/全局配置.html" class="navigation navigation-next " aria-label="Next page: 全局配置">
+                <a href="../mac/brew-安装指定版本的软件.html" class="navigation navigation-next " aria-label="Next page: brew 安装指定版本的软件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -798,7 +833,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VPN 环境下 WSL 更新 DNS","level":"7.2","depth":1,"next":{"title":"全局配置","level":"8.1","depth":1,"path":"git/全局配置.md","ref":"git/全局配置.md","articles":[]},"previous":{"title":"开机时自动开启 WSL ssh 服务","level":"7.1","depth":1,"path":"wsl/开机时自动开启-WSL-ssh-服务.md","ref":"wsl/开机时自动开启-WSL-ssh-服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"wsl/VPN-环境下-WSL-更新-DNS.md","mtime":"2021-02-05T06:34:39.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-13T06:23:31.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker 安装","level":"4.4","depth":1,"next":{"title":"brew 安装指定版本的软件","level":"5.1","depth":1,"path":"mac/brew-安装指定版本的软件.md","ref":"mac/brew-安装指定版本的软件.md","articles":[]},"previous":{"title":"screen","level":"4.3","depth":1,"path":"linux/screen.md","ref":"linux/screen.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"linux/Docker-安装.md","mtime":"2022-07-13T06:20:56.068Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-13T06:23:31.084Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

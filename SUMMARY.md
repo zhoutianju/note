@@ -14,6 +14,7 @@
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 * [logrotate 切割日志](linux/logrotate-切割日志.md)
 * [screen](linux/screen.md)
+* [Docker 安装](linux/Docker-安装.md)
 
 ## Mac
 * [brew 安装指定版本的软件](mac/brew-安装指定版本的软件.md)
@@ -39,6 +40,12 @@
 ## MySQL
 * [账号授权](mysql/账号授权.md)
 * [mysqldump](mysql/mysqldump.md)
+
+## Oracle
+* [Oracle 安装](oracle/Oracle-安装.md)
+
+## Clickhouse
+* [Clickhouse 安装](clickhouse/Clickhouse-安装.md)
 
 ## Nginx
 * [Windows 安装 Nginx](nginx/Windows-安装-Nginx.md)
