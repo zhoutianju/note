@@ -35,6 +35,8 @@ ctrl+a d
 ctrl+a '"'
 # 滚动
 ctrl+a up/down/pgUp/pgDown
+# 杀死某个 hang 住的 tab
+ctrl+a :kill
 ```
 
 .screenrc
