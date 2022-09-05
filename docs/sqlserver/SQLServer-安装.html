@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>常用脚本片段 · 个人笔记</title>
+        <title>SQLServer 安装 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../linux/CentOS-防火墙配置.html" />
+    <link rel="next" href="../clickhouse/Clickhouse-安装.html" />
     
     
-    <link rel="prev" href="../maven/单独下载依赖.html" />
+    <link rel="prev" href="../oracle/Oracle-安装.html" />
     
 
     
@@ -185,9 +185,9 @@
         
         
     
-        <li class="chapter active" data-level="3.1" data-path="常用脚本片段.html">
+        <li class="chapter " data-level="3.1" data-path="../shell/常用脚本片段.html">
             
-                <a href="常用脚本片段.html">
+                <a href="../shell/常用脚本片段.html">
             
                     
                     常用脚本片段
@@ -495,9 +495,9 @@
         
         
     
-        <li class="chapter " data-level="12.1" data-path="../sqlserver/SQLServer-安装.html">
+        <li class="chapter active" data-level="12.1" data-path="SQLServer-安装.html">
             
-                <a href="../sqlserver/SQLServer-安装.html">
+                <a href="SQLServer-安装.html">
             
                     
                     SQLServer 安装
@@ -769,7 +769,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >常用脚本片段</a>
+        <a href=".." >SQLServer 安装</a>
     </h1>
 </div>
 
@@ -784,23 +784,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;"><b></b>&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;</a></li></ul></div><a href="#&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2021-09-28 17:08:17</span></p>
-<h1 id="&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;"><a name="&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x811A;&#x672C;&#x7247;&#x6BB5;</h1>
-<p>&#x5982;&#x679C;&#x4E0A;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5931;&#x8D25;</p>
-<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ $? <span class="hljs-_">-ne</span> 0 ]; <span class="hljs-keyword">then</span>
-    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;failed&quot;</span>
-<span class="hljs-keyword">fi</span>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sqlserver-&#x5B89;&#x88C5;"><b></b>SQLServer &#x5B89;&#x88C5;</a></li><ul><ul><li><span class="title-icon "></span><a href="#docker-&#x5B89;&#x88C5;-mssql"><b></b>docker &#x5B89;&#x88C5; MSSQL</a></li><li><span class="title-icon "></span><a href="#&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;"><b></b>&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;</a></li></ul></ul></ul></div><a href="#sqlserver-&#x5B89;&#x88C5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2022-09-05 15:42:22</span></p>
+<h1 id="sqlserver-&#x5B89;&#x88C5;"><a name="sqlserver-&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#sqlserver-&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>SQLServer &#x5B89;&#x88C5;</h1>
+<h3 id="docker-&#x5B89;&#x88C5;-mssql"><a name="docker-&#x5B89;&#x88C5;-mssql" class="anchor-navigation-ex-anchor" href="#docker-&#x5B89;&#x88C5;-mssql"><i class="fa fa-link" aria-hidden="true"></i></a>docker &#x5B89;&#x88C5; MSSQL</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x62C9;&#x955C;&#x50CF;</span>
+docker pull mcr.microsoft.com/mssql/server
+
+<span class="hljs-comment"># &#x542F;&#x52A8;</span>
+docker run <span class="hljs-_">-e</span> <span class="hljs-string">&quot;ACCEPT_EULA=Y&quot;</span> <span class="hljs-_">-e</span> <span class="hljs-string">&quot;SA_PASSWORD=yourStrong@Password&quot;</span> -p 1433:1433 <span class="hljs-_">-d</span> mcr.microsoft.com/mssql/server:latest
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x72B6;&#x6001;</span>
+docker stats <span class="hljs-comment"># &#x590D;&#x5236; CONTAINER ID</span>
+
+<span class="hljs-comment"># &#x672C;&#x5730;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#xFF0C;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</span>
+docker <span class="hljs-built_in">exec</span> -it <span class="hljs-variable">${CONTAINER_ID}</span> /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P yourStrong@Password
+<span class="hljs-comment"># 1&gt; CREATE DATABASE test</span>
+<span class="hljs-comment"># 2&gt; go</span>
 </code></pre>
-<p>&#x5224;&#x65AD;&#x8F93;&#x5165;&#x53C2;&#x6570;</p>
-<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> <span class="hljs-_">-gt</span> 0 ];<span class="hljs-keyword">then</span>
-    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;arg[1]: <span class="hljs-variable">$1</span>&quot;</span>
-<span class="hljs-keyword">fi</span>
+<h3 id="&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x8BE2;&#x7248;&#x672C;</span>
+mssql-cli -S 10.26.62.137,1433 -U SA -P yourStrong@Password <span class="hljs-_">-d</span> <span class="hljs-built_in">test</span> <span class="hljs-_">-l</span> 3 -Q <span class="hljs-string">&apos;select @@version&apos;</span>
+
+<span class="hljs-comment"># &#x5EFA;&#x8868;&#x3001;&#x63D2;&#x5165;&#x6570;&#x636E;&#x3001;&#x67E5;&#x8BE2;</span>
+mssql-cli -S 10.26.62.137,1433 -U SA -P yourStrong@Password <span class="hljs-_">-d</span> <span class="hljs-built_in">test</span> <span class="hljs-_">-l</span> 3
+<span class="hljs-comment"># test&gt; CREATE TABLE word_count (</span>
+<span class="hljs-comment"># .....     id INT PRIMARY KEY IDENTITY (1, 1),</span>
+<span class="hljs-comment"># .....     word VARCHAR (50) NOT NULL</span>
+<span class="hljs-comment"># ..... );</span>
+<span class="hljs-comment"># Time: 0.252s</span>
+<span class="hljs-comment"># Commands completed successfully.</span>
+
+<span class="hljs-comment"># test&gt; insert into word_count (word) values (&apos;hello&apos;), (&apos;world&apos;);</span>
+<span class="hljs-comment"># Time: 0.252s</span>
+<span class="hljs-comment"># (2 rows affected)</span>
+
+<span class="hljs-comment"># test&gt; select * from word_count;</span>
+<span class="hljs-comment"># Time: 0.452s</span>
+<span class="hljs-comment"># +------+--------+</span>
+<span class="hljs-comment"># | id   | word   |</span>
+<span class="hljs-comment"># |------+--------|</span>
+<span class="hljs-comment"># | 1    | hello  |</span>
+<span class="hljs-comment"># | 2    | world  |</span>
+<span class="hljs-comment"># +------+--------+</span>
+<span class="hljs-comment"># (2 rows affected)</span>
 </code></pre>
-<p>&#x66FF;&#x6362; HTML &#x4E2D;&#x7684;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</p>
-<pre><code class="lang-bash">sed <span class="hljs-string">&apos;s/&amp;/\&amp;amp;/g; s/&lt;/\&amp;lt;/g; s/&gt;/\&amp;gt;/g; s/&quot;/\&amp;quot;/g; s/&apos;</span><span class="hljs-string">&quot;&apos;&quot;</span><span class="hljs-string">&apos;/\&amp;#39;/g&apos;</span>
-</code></pre>
-<p><br><br><div style="color:gray;">Copyright &#xA9; 2021 zhoutianju.<br>All rights reserved.</div></p>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2022 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -828,12 +856,12 @@
 
             
                 
-                <a href="../maven/单独下载依赖.html" class="navigation navigation-prev " aria-label="Previous page: 单独下载依赖">
+                <a href="../oracle/Oracle-安装.html" class="navigation navigation-prev " aria-label="Previous page: Oracle 安装">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../linux/CentOS-防火墙配置.html" class="navigation navigation-next " aria-label="Next page: CentOS 防火墙配置">
+                <a href="../clickhouse/Clickhouse-安装.html" class="navigation navigation-next " aria-label="Next page: Clickhouse 安装">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -844,7 +872,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用脚本片段","level":"3.1","depth":1,"next":{"title":"CentOS 防火墙配置","level":"4.1","depth":1,"path":"linux/CentOS-防火墙配置.md","ref":"linux/CentOS-防火墙配置.md","articles":[]},"previous":{"title":"单独下载依赖","level":"2.3","depth":1,"path":"maven/单独下载依赖.md","ref":"maven/单独下载依赖.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"shell/常用脚本片段.md","mtime":"2021-09-28T09:08:17.667Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-05T07:43:15.650Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQLServer 安装","level":"12.1","depth":1,"next":{"title":"Clickhouse 安装","level":"13.1","depth":1,"path":"clickhouse/Clickhouse-安装.md","ref":"clickhouse/Clickhouse-安装.md","articles":[]},"previous":{"title":"Oracle 安装","level":"11.1","depth":1,"path":"oracle/Oracle-安装.md","ref":"oracle/Oracle-安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":true,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"sqlserver/SQLServer-安装.md","mtime":"2022-09-05T07:42:22.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-05T07:43:15.650Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

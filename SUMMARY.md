@@ -44,6 +44,9 @@
 ## Oracle
 * [Oracle 安装](oracle/Oracle-安装.md)
 
+## SQLServer
+* [SQLServer 安装](sqlserver/SQLServer-安装.md)
+
 ## Clickhouse
 * [Clickhouse 安装](clickhouse/Clickhouse-安装.md)
 
