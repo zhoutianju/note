@@ -69,6 +69,9 @@
 ## Regex
 * [常用正则表达式](regex/常用正则表达式.md)
 
+## Lucene
+* [常用 Lucene 语法](lucene/常用-Lucene-语法.md)
+
 ## 网络
 * [DNS A 记录和 CNAME 记录](网络/DNS-A-记录和-CNAME-记录.md)
 
