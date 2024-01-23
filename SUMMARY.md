@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Prometheus](README.md)
+* [简介](README.md)
+* [Prometheus](<README (1).md>)
   * [process-exporter](prometheus/process-exporter.md)
-* [简介](<README (1).md>)
 
 ## Maven
 

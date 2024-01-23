@@ -1,16 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# 个人笔记
 
-# Prometheus
-
+请访问：[https://zhoutianju.gitbook.io/note/](https://zhoutianju.gitbook.io/note/)
