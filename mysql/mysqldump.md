@@ -32,13 +32,13 @@ Warning: A partial dump from a server that has GTIDs will by default include the
 
 > GTID 是MySQL5.6+提供的全局事务ID，用于主从复制使用，开启GTID的数据库导出时都会报这个警告
 
-***GTID是运维需要关注的，开发过程中使用一下方式简单解决***
+_**GTID是运维需要关注的，开发过程中使用一下方式简单解决**_
 
 解决办法：增加参数`--set-gtid-purged=OFF`
 
 ### 不导出`CREATE`语句
 
-解决方法：增加参数` --no-create-info`
+解决方法：增加参数 `--no-create-info`
 
 ### 不导出结构化注释语句
 
@@ -54,4 +54,4 @@ Warning: A partial dump from a server that has GTIDs will by default include the
 mysql -h${host} -P${port} -u${user} -p${password} ${db} < ${dump_file}
 ```
 
-***注意，如果导入`mysqldump -w ${where}`导出的条件筛选sql文件，并且需要保留导入目的数据库的当前数据，需要把sql文件中的`drop table`和`create table`手动去掉***
+_**注意，如果导入****`mysqldump -w ${where}`****导出的条件筛选sql文件，并且需要保留导入目的数据库的当前数据，需要把sql文件中的****`drop table`****和****`create table`****手动去掉**_
