@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>常用 Lucene 语法 · 个人笔记</title>
+        <title>tmux · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../网络/DNS-A-记录和-CNAME-记录.html" />
+    <link rel="next" href="Docker-安装.html" />
     
     
-    <link rel="prev" href="../regex/常用正则表达式.html" />
+    <link rel="prev" href="screen.html" />
     
 
     
@@ -205,9 +205,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../linux/CentOS-防火墙配置.html">
+        <li class="chapter " data-level="4.1" data-path="CentOS-防火墙配置.html">
             
-                <a href="../linux/CentOS-防火墙配置.html">
+                <a href="CentOS-防火墙配置.html">
             
                     
                     CentOS 防火墙配置
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../linux/logrotate-切割日志.html">
+        <li class="chapter " data-level="4.2" data-path="logrotate-切割日志.html">
             
-                <a href="../linux/logrotate-切割日志.html">
+                <a href="logrotate-切割日志.html">
             
                     
                     logrotate 切割日志
@@ -231,9 +231,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../linux/screen.html">
+        <li class="chapter " data-level="4.3" data-path="screen.html">
             
-                <a href="../linux/screen.html">
+                <a href="screen.html">
             
                     
                     screen
@@ -244,9 +244,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../linux/tmux.html">
+        <li class="chapter active" data-level="4.4" data-path="tmux.html">
             
-                <a href="../linux/tmux.html">
+                <a href="tmux.html">
             
                     
                     tmux
@@ -257,9 +257,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="../linux/Docker-安装.html">
+        <li class="chapter " data-level="4.5" data-path="Docker-安装.html">
             
-                <a href="../linux/Docker-安装.html">
+                <a href="Docker-安装.html">
             
                     
                     Docker 安装
@@ -719,9 +719,9 @@
         
         
     
-        <li class="chapter active" data-level="18.1" data-path="常用-Lucene-语法.html">
+        <li class="chapter " data-level="18.1" data-path="../lucene/常用-Lucene-语法.html">
             
-                <a href="常用-Lucene-语法.html">
+                <a href="../lucene/常用-Lucene-语法.html">
             
                     
                     常用 Lucene 语法
@@ -802,7 +802,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >常用 Lucene 语法</a>
+        <a href=".." >tmux</a>
     </h1>
 </div>
 
@@ -817,12 +817,65 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;-lucene-&#x8BED;&#x6CD5;"><b></b>&#x5E38;&#x7528; Lucene &#x8BED;&#x6CD5;</a></li></ul></div><a href="#&#x5E38;&#x7528;-lucene-&#x8BED;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by zhoutianju
-, 2023-06-02 00:54:42</span></p>
-<h1 id="&#x5E38;&#x7528;-lucene-&#x8BED;&#x6CD5;"><a name="&#x5E38;&#x7528;-lucene-&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;-lucene-&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528; Lucene &#x8BED;&#x6CD5;</h1>
-<p>&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;&#xFF1A;</p>
-<pre><code>logger: com.dianping.cat*
-</code></pre><p><br><br><div style="color:gray;">Copyright &#xA9; 2023 zhoutianju.<br>All rights reserved.</div></p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tmux"><b></b>tmux</a></li></ul></div><a href="#tmux" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p> <span style="color:gray">last modified by , 2024-11-26 09:10:40</span></p>
+<h1 id="tmux"><a name="tmux" class="anchor-navigation-ex-anchor" href="#tmux"><i class="fa fa-link" aria-hidden="true"></i></a>tmux</h1>
+<ul>
+<li>&#x5B98;&#x65B9;: <a href="https://github.com/tmux/tmux" target="_blank">https://github.com/tmux/tmux</a></li>
+<li>&#x53C2;&#x8003;: <a href="https://louiszhai.github.io/2017/09/30/tmux/" target="_blank">https://louiszhai.github.io/2017/09/30/tmux/</a></li>
+</ul>
+<pre><code class="lang-bash">
+<span class="hljs-comment"># for macos</span>
+brew info tmux
+brew install tmux
+
+<span class="hljs-comment"># for centos7</span>
+<span class="hljs-comment"># yum install http://galaxy4.net/repo/galaxy4-release-8-current.noarch.rpm</span>
+yum install http://galaxy4.net/repo/galaxy4-release-7-current.noarch.rpm
+yum repolist
+yum install gcc kernel-devel make ncurses-devel
+yum info tmux
+yum install tmux
+
+<span class="hljs-comment"># install plugins</span>
+mkdir -p ~/.tmux/plugins
+<span class="hljs-built_in">cd</span> ~/.tmux/plugins
+git <span class="hljs-built_in">clone</span> https://github.com/tmux-plugins/tmux-sensible.git
+git <span class="hljs-built_in">clone</span> https://github.com/tmux-plugins/tmux-resurrect.git
+git <span class="hljs-built_in">clone</span> https://github.com/tmux-plugins/tmux-continuum.git
+
+<span class="hljs-comment"># plugins runtime</span>
+<span class="hljs-built_in">cd</span> ~/.local/share/tmux
+
+<span class="hljs-comment"># configuration</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;set -g prefix C-a
+set -g @continuum-restore &apos;on&apos;
+unbind C-b
+bind C-a send-prefix
+bind C-a last-window
+bind Escape copy-mode
+run-shell ~/clone/path/sensible.tmux
+run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
+run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
+&quot;</span> &gt; ~/.tmux.conf
+
+<span class="hljs-comment"># macos additional</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;set -g default-shell /opt/homebrew/bin/bash
+&quot;</span> &gt;&gt; ~/.tmux.conf
+
+<span class="hljs-comment"># load configuration</span>
+tmux <span class="hljs-built_in">source</span> ~/.tmux.conf
+
+<span class="hljs-comment"># usage</span>
+tmux --help <span class="hljs-comment"># help</span>
+man tmux <span class="hljs-comment"># manual</span>
+tmux -V <span class="hljs-comment"># version</span>
+tmux <span class="hljs-comment"># start</span>
+tmux new <span class="hljs-_">-s</span> <span class="hljs-string">&apos;diaodu&apos;</span> <span class="hljs-comment"># new by name</span>
+tmux a <span class="hljs-comment"># attache</span>
+tmux a -t <span class="hljs-string">&apos;diaodu&apos;</span> <span class="hljs-comment"># attache by name</span>
+tmux ls <span class="hljs-comment"># ls</span>
+</code></pre>
+<p><br><br><div style="color:gray;">Copyright &#xA9; 2024 zhoutianju.<br>All rights reserved.</div></p>
 
                                 
                                 </section>
@@ -850,12 +903,12 @@
 
             
                 
-                <a href="../regex/常用正则表达式.html" class="navigation navigation-prev " aria-label="Previous page: 常用正则表达式">
+                <a href="screen.html" class="navigation navigation-prev " aria-label="Previous page: screen">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../网络/DNS-A-记录和-CNAME-记录.html" class="navigation navigation-next " aria-label="Next page: DNS A 记录和 CNAME 记录">
+                <a href="Docker-安装.html" class="navigation navigation-next " aria-label="Next page: Docker 安装">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -866,7 +919,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用 Lucene 语法","level":"18.1","depth":1,"next":{"title":"DNS A 记录和 CNAME 记录","level":"19.1","depth":1,"path":"网络/DNS-A-记录和-CNAME-记录.md","ref":"网络/DNS-A-记录和-CNAME-记录.md","articles":[]},"previous":{"title":"常用正则表达式","level":"17.1","depth":1,"path":"regex/常用正则表达式.md","ref":"regex/常用正则表达式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":false,"mode":"float","showGoTop":true,"printLog":true,"multipleH1":false,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"lucene/常用-Lucene-语法.md","mtime":"2023-06-01T16:54:42.113Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-26T01:57:32.678Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"tmux","level":"4.4","depth":1,"next":{"title":"Docker 安装","level":"4.5","depth":1,"path":"linux/Docker-安装.md","ref":"linux/Docker-安装.md","articles":[]},"previous":{"title":"screen","level":"4.3","depth":1,"path":"linux/screen.md","ref":"linux/screen.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","-sharing","github@2.0.0","mermaid-gb3","favicon","hide-element","signature","code","chapter-fold","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/zhoutianju/note"},"code":{"copyButtons":true},"gitbook-plugin-signature":{"autoTimeStamp":{"color":"gray","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"autoCopyright":{"color":"gray","owner":"zhoutianju"}},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":false,"mode":"float","showGoTop":true,"printLog":true,"multipleH1":false,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"/asset/favicon.ico","bookmark":"/asset/favicon.ico"},"signature":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","gitbook":"*"},"file":{"path":"linux/tmux.md","mtime":"2024-11-26T01:10:40.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-26T01:57:32.678Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

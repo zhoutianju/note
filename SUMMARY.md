@@ -14,6 +14,7 @@
 * [CentOS 防火墙配置](linux/CentOS-防火墙配置.md)
 * [logrotate 切割日志](linux/logrotate-切割日志.md)
 * [screen](linux/screen.md)
+* [tmux](linux/tmux.md)
 * [Docker 安装](linux/Docker-安装.md)
 
 ## Mac
