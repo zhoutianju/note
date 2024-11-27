@@ -30,11 +30,12 @@ cd ~/.local/share/tmux
 # configuration
 echo "set -g prefix C-a
 set -g @continuum-restore 'on'
+set -g @continuum-save-interval '15'
 unbind C-b
 bind C-a send-prefix
 bind C-a last-window
 bind Escape copy-mode
-run-shell ~/clone/path/sensible.tmux
+run-shell ~/.tmux/plugins/tmux-sensible/sensible.tmux
 run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
 run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
 " > ~/.tmux.conf
