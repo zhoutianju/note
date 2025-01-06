@@ -57,4 +57,11 @@ tmux a # attache
 tmux a -t 'diaodu' # attache by name
 tmux ls # ls
 
+# sub command ( prefix + : )
+swap-window -s 3 -t 1 # to let window number 3 and window number 1 swap their positions
+swap-window -t +1 # move the current window to the right
+swap-window -t -1 # move the current window to the left
+swap-window -t 0 # To swap the current window with the top window
+move-window -t 0 # In the unlikely case of having no window at index 0
+
 ```
